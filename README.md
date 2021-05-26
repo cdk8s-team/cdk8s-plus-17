@@ -1,17 +1,21 @@
-## My Project
+# cdk8s+ (cdk8s-plus)
 
-TODO: Fill this README out!
+### High level constructs for Kubernetes
 
-Be sure to:
+<br>
 
-* Change the title in this README
-* Edit your repository description on GitHub
+![Beta](https://img.shields.io/badge/beta-informational.svg?style=for-the-badge)
 
-## Security
+**cdk8s+** is a software development framework that provides high level abstractions for authoring Kubernetes applications.
+Built on top of the auto generated building blocks provided by [cdk8s](../cdk8s), this library includes a hand crafted *construct*
+for each native kubernetes object, exposing richer API's with reduced complexity.
 
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
+## Documentation
+
+See [cdk8s.io](https://cdk8s.io/docs/latest/plus).
 
 ## License
 
-This project is licensed under the Apache-2.0 License.
+This project is distributed under the [Apache License, Version 2.0](./LICENSE).
 
+This module is part of the [cdk8s project](https://github.com/awslabs/cdk8s).

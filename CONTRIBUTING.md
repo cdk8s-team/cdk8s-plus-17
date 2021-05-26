@@ -1,59 +1,144 @@
-# Contributing Guidelines
+# cdk8s+ (cdk8s-plus)
 
-Thank you for your interest in contributing to our project. Whether it's a bug report, new feature, correction, or additional
-documentation, we greatly value feedback and contributions from our community.
+Hey there! Thanks for taking an interest in contributing to cdk8s+ 😀
 
-Please read through this document before submitting any issues or pull requests to ensure we have all the necessary
-information to effectively respond to your bug report or contribution.
+> Before you continue, please make sure you've read the general procedural contribution guidance for this repository: [Contributing to cdk8s](../../CONTRIBUTING.md)
+
+## Design Principles
+
+As already mentioned in the [README](./README.md), this library is in very early stages of development.
+Even so, there are several design principles we would like to try and maintain:
+
+> Note: nothing is set in stone, if you feel these principles are in some way limiting in providing the best API possible, please feel
+free to voice your concerns and even submit a PR to amend the principles themselves.
+
+### Mutability
+
+As you will notice, objects in this API are mutable on collections and have
+read-only accessors for primitives.
+
+For example:
+
+```typescript
+import * as kplus from 'cdk8s-plus-17';
+
+const pod = new kplus.Pod(parent, 'Pod', {
+  replicas: 4
+});
+
+// mutating the pod spec with another volume
+pod.spec.addVolume(volume);
+
+// mutating the pod spec with another container
+pod.spec.addContainer(container);
+
+// returns the resolved value of "replicas"
+assert(pod.replicas === 4);
+```
+
+When an object is instantiated, it is initialized through a set of properties
+("props"). In many cases, these properties will have default values. After an
+object is already initialized it should be possible to:
+
+1. **Read** resolved values of primitive values through properties by the same
+   name:
+
+    ```ts
+    interface FooProps {
+      /**
+       * @default 10
+       **/
+      readonly replicas?: number;
+    }
+
+    class Foo extends Construct {
+      public readonly replicas: number;
+
+      constructor(scope: Construct, id: string, props: FooProps = { }) {
+        super(scope, id);
+
+        this.replicas = props.replicas ?? 10;
+      }
+    }
+    ```
+
+2. **Mutate collections (lists/maps)**: since mutation of unordered collections
+   is a safe operation in respect to ordering (anyone can add items to a set or
+   a new key to a map without "racing" with other areas in the code), we should
+   offer `addXxx` mutation methods for lists and maps:
+
+   ```ts
+   interface FooProps {
+     readonly bar?: string[];
+     readonly baz?: { [key: string]: string };
+   }
+
+   class Foo ... {
+     public addBar(item: string): void { ... }
+     public addBaz(key: string, value: string): void { ... }
+   }
+   ```
+
+3. **Read collections through immutable copies**: the API should also include
+   properties for obtaining a copy of collections so they can be inspected but
+   not modified (continuing the previous example):
+
+   ```ts
+   class Foo ... {
+     private readonly _bar: string[];
+     private readonly _baz: { [k: string]: string };
+
+     constructor() {
+       this._bar = props.bar ?? [];
+       this._baz = props.baz ?? {};
+     }
+
+    // use spreads to create a copy
+     public get bar() { return [ ...this._bar ]; }
+     public get baz() { return { ...this._baz }; }
+   }
+   ```
 
 
-## Reporting Bugs/Feature Requests
+The reasoning behind this is three fold:
 
-We welcome you to use the GitHub issue tracker to report bugs or suggest features.
+1. Kubernetes spec objects have an extremely large surface area. Configuring all
+   properties in the constructor can easily result in cluttered and un-readable
+   code. Exposing post instantiation methods can provide a cleaner, more
+   semantic mechanism of configuration.
 
-When filing an issue, please check existing open, or recently closed, issues to make sure somebody else hasn't already
-reported the issue. Please try to include as much information as you can. Details like these are incredibly useful:
+2. This library aims to reduce the complexity of creating Kubernetes
+   configuration files. An important enabler to achieve this, is the ability to
+   auto wire different resources to work together. To that end, post
+   instantiation mutations are often required.
 
-* A reproducible test case or series of steps
-* The version of our code being used
-* Any modifications you've made relevant to the bug
-* Anything unusual about your environment or deployment
+3. The reason we only allow mutations of (unordered) collections and not
+   primitive values is in order to protect against the situation where multiple
+   places in your code attempt to write conflicting values to a primitive, and
+   the order in which they write now becomes important (i.e. a small, unrelated
+   refactor may change the order). This problem does not exist with unordered
+   collections.
 
+### Non leaky
 
-## Contributing via Pull Requests
-Contributions via pull requests are much appreciated. Before sending us a pull request, please ensure that:
+We strive to provide a full abstraction that does not expose the underlying [auto-generated](./imports/k8s.d.ts) api objects.
+Many times, this may result in some code duplication or redundancy. Even though it itches our developer nerves, we do not shy away from it.
 
-1. You are working against the latest source on the *main* branch.
-2. You check existing open, and recently merged, pull requests to make sure someone else hasn't addressed the problem already.
-3. You open an issue to discuss any significant work - we would hate for your time to be wasted.
+> **Sometimes, a little duplication is better than a lot of dependencies.**
 
-To send us a pull request, please:
+## API Reference
 
-1. Fork the repository.
-2. Modify the source; please focus on the specific change you are contributing. If you also reformat all the code, it will be hard for us to focus on your change.
-3. Ensure local tests pass.
-4. Commit to your fork using clear commit messages.
-5. Send us a pull request, answering any default questions in the pull request interface.
-6. Pay attention to any automated CI failures reported in the pull request, and stay involved in the conversation.
+We generate a full [API](./API.md) reference automatically during build time. Make sure to always run `yarn build` and committing the `API.md` file before submitting a Pull Request.
 
-GitHub provides additional document on [forking a repository](https://help.github.com/articles/fork-a-repo/) and
-[creating a pull request](https://help.github.com/articles/creating-a-pull-request/).
+## Project Metadata
 
+There are several metadata files that are used by this project:
 
-## Finding contributions to work on
-Looking at the existing issues is a great way to find something to contribute on. As our projects, by default, use the default GitHub issue labels (enhancement/bug/duplicate/help wanted/invalid/question/wontfix), looking at any 'help wanted' issues is a great place to start.
+- `package.json` - Standard node project metadata file.
+- `tsconfig.json` - TypeScript configuration file that controls the compilation process.
+- `tsconfig.jest.json` - Configuration file used by the `jest` testing framework to enable seamless test execution without explicitly compiling source files.
+- `.eslintrc.json` - [ESLint](https://eslint.org/) configuration file.
 
+All these files are managed by the [projen](https://www.npmjs.com/package/projen) tool, and are automatically generated during build time.
 
-## Code of Conduct
-This project has adopted the [Amazon Open Source Code of Conduct](https://aws.github.io/code-of-conduct).
-For more information see the [Code of Conduct FAQ](https://aws.github.io/code-of-conduct-faq) or contact
-opensource-codeofconduct@amazon.com with any additional questions or comments.
-
-
-## Security issue notifications
-If you discover a potential security issue in this project we ask that you notify AWS/Amazon Security via our [vulnerability reporting page](http://aws.amazon.com/security/vulnerability-reporting/). Please do **not** create a public github issue.
-
-
-## Licensing
-
-See the [LICENSE](LICENSE) file for our project's licensing. We will ask you to confirm the licensing of your contribution.
+Changes to these files should be performed solely via the [projenrc](./.projenrc.js) config file.

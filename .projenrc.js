@@ -1,35 +1,44 @@
 const path = require('path');
-const { JsiiProject, Semver } = require('projen');
-const common = require('../projen-common');
+const { JsiiProject } = require('projen');
 
 const SPEC_VERSION = '17';
+const K8S_VERSION = '1.17.0';
+const cdk8sver = require('./cdk8s-version.json').version;
 
 const project = new JsiiProject({
   name: `cdk8s-plus-${SPEC_VERSION}`,
   description: 'High level abstractions on top of cdk8s',
-  stability: common.options.stability,
+
+  repositoryUrl: 'git@github.com:cdk8s-team/cdk8s-plus-17.git',
+  authorName: 'Amazon Web Services',
+  authorUrl: 'https://aws.amazon.com',
 
   // without this, the version of 'constructs' would need to be controlled
   // from this file, since otherwise it would create a 0.0.0 dev dependency.
   peerDependencyOptions: {
     pinnedDevDependency: false,
   },
-  ...common.options,
 
   peerDeps: [
-    'cdk8s@^0.0.0',
+    `cdk8s@${cdk8sver}`,
     'constructs',
   ],
   deps: [
     'minimatch',
   ],
-  bundledDeps: ['minimatch'],
+  bundledDeps: [
+    'minimatch',
+  ],
   devDeps: [
     'constructs',
     '@types/minimatch',
-    'cdk8s@0.0.0',
+    `cdk8s@${cdk8sver}`,
+    `cdk8s-cli@${cdk8sver}`,
     'constructs',
   ],
+
+  defaultReleaseBranch: 'main',
+  minNodeVersion: '10.17.0',
 
   // jsii configuration
   publishToMaven: {
@@ -50,10 +59,7 @@ const project = new JsiiProject({
   },
 });
 
-common.fixup(project);
-
-const K8S_VERSION = '1.17.0';
 const importdir = path.join('src', 'imports');
 
-project.setScript('import', `../cdk8s-cli/bin/cdk8s -l typescript -o ${importdir} import k8s@${K8S_VERSION}`);
+project.setScript('import', `cdk8s -l typescript -o ${importdir} import k8s@${K8S_VERSION}`);
 project.synth();
