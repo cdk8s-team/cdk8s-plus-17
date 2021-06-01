@@ -3,7 +3,6 @@ const { JsiiProject } = require('projen');
 
 const SPEC_VERSION = '17';
 const K8S_VERSION = '1.17.0';
-const cdk8sver = require('./cdk8s-version.json').version;
 
 const project = new JsiiProject({
   name: `cdk8s-plus-${SPEC_VERSION}`,
@@ -23,7 +22,7 @@ const project = new JsiiProject({
   },
 
   peerDeps: [
-    `cdk8s@${cdk8sver}`,
+    'cdk8s',
     'constructs',
   ],
   deps: [
@@ -35,8 +34,8 @@ const project = new JsiiProject({
   devDeps: [
     'constructs',
     '@types/minimatch',
-    `cdk8s@${cdk8sver}`,
-    `cdk8s-cli@${cdk8sver}`,
+    'cdk8s',
+    'cdk8s-cli',
     'constructs',
   ],
 
