@@ -1383,10 +1383,10 @@ caseless@~0.12.0:
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
   integrity sha1-G2gcIf+EAzyCZUMJBolCDRhxUdw=
 
-cdk8s-cli@1.0.0-beta.20:
-  version "1.0.0-beta.20"
-  resolved "https://registry.yarnpkg.com/cdk8s-cli/-/cdk8s-cli-1.0.0-beta.20.tgz#0b5259001f50a4a154f6b97978de74595856ba5b"
-  integrity sha512-VAwsACFawdTCJeeJ7fZib7te+R3IpkrpuB6Y6YGJS4EcgEQkW+SCk/wr7AGlTKTWeFh8IncR67HaEHiBAj5mGg==
+cdk8s-cli@1.0.0-beta.22:
+  version "1.0.0-beta.22"
+  resolved "https://registry.yarnpkg.com/cdk8s-cli/-/cdk8s-cli-1.0.0-beta.22.tgz#732f6b68e4323fa4b9bc836f3652d70b36a11866"
+  integrity sha512-hQrssZlC0Cy/PruMVi9N9oU0UuEUCEc0a99l4CgBa63RnVFxU/nEUTStKVKKjpTUl+NOO87cdiHkw6Q81gBIrg==
   dependencies:
     "@types/node" "^10.17.0"
     cdk8s "1.0.0-beta.14"
@@ -1418,10 +1418,10 @@ cdk8s@1.0.0-beta.14:
     follow-redirects "^1.14.1"
     yaml "2.0.0-5"
 
-cdk8s@1.0.0-beta.19:
-  version "1.0.0-beta.19"
-  resolved "https://registry.yarnpkg.com/cdk8s/-/cdk8s-1.0.0-beta.19.tgz#c9f779326c085691d2460126fb26490e6f7895da"
-  integrity sha512-S4W24gX9o48kJLNN+iXrHgppvNAbzpunpP6ClYxREC8u9UCKJgzpk46EtAGjhBcpQNI6Dh4IOy9VJwimBU0osg==
+cdk8s@1.0.0-beta.21:
+  version "1.0.0-beta.21"
+  resolved "https://registry.yarnpkg.com/cdk8s/-/cdk8s-1.0.0-beta.21.tgz#f1d1089dfa48072a796d58bd89cda46dc9f9ec29"
+  integrity sha512-OhJJ9l5Z12xO8fBmULm5SFkcpbSzJk5+dE/WP4cBJywzH/RAt3hV08IeeydBaEZCXvWNFLEGtCxZ2BkiJ96gyA==
   dependencies:
     fast-json-patch "^2.2.1"
     follow-redirects "^1.14.1"
@@ -4029,10 +4029,10 @@ jsii-diff@^1.30.0:
     typescript "~3.9.9"
     yargs "^16.2.0"
 
-jsii-docgen@^1.8.88:
-  version "1.8.88"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-1.8.88.tgz#b0eba7d98f20bb0aeecb4bb8dc13b00f985b3b85"
-  integrity sha512-CTW585S3G0mjRuVQBZDke2eE+E5DwDavH10LxOJbZWYT7XpDyKw+LytqwEofjPfy426Yrq3wzvKrjEL7lcoagg==
+jsii-docgen@^1.8.89:
+  version "1.8.89"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-1.8.89.tgz#81f71da20161e293ef9d08de2b6a8153cbf12584"
+  integrity sha512-gb6N86ePVwGlQqZjkOzR70z0QpTh51P6/+gPGlRva5ndVIO5CzRv7qAFQhHcBgv7dTkH34qu8ncIUkMxMXCzpw==
   dependencies:
     "@jsii/spec" "^1.30.0"
     fs-extra "^9.1.0"
