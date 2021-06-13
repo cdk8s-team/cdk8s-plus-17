@@ -59,6 +59,11 @@ const project = new JsiiProject({
   publishToGo: {
     moduleName: 'github.com/awslabs/cdk8s-go',
   },
+  autoApproveOptions: {
+    allowedUsernames: ['cdk8s-automation'],
+    secret: 'GITHUB_TOKEN',
+  },
+  autoApproveUpgrades: true,
 });
 
 const importdir = path.join('src', 'imports');
