@@ -120,15 +120,11 @@
       "description": "Bumps version based on latest git tag and generates a changelog entry",
       "env": {
         "OUTFILE": "package.json",
-        "INITIAL_VERSION": "v0.1.0",
-        "PRERELEASE": "beta"
+        "CHANGELOG": ".changelog.tmp.md"
       },
       "steps": [
         {
-          "builtin": "release/resolve-version"
-        },
-        {
-          "exec": "npx standard-version@^9"
+          "builtin": "release/bump-version"
         }
       ],
       "condition": "! git log --oneline -1 | grep -q \"chore(release):\""
@@ -138,7 +134,8 @@
       "category": "20.release",
       "description": "Restores version to 0.0.0",
       "env": {
-        "OUTFILE": "package.json"
+        "OUTFILE": "package.json",
+        "CHANGELOG": ".changelog.tmp.md"
       },
       "steps": [
         {
@@ -154,28 +151,13 @@
       },
       "steps": [
         {
-          "exec": "npm-check-updates --upgrade --target=minor --reject='projen'"
+          "exec": "npm-check-updates --upgrade --target=minor"
         },
         {
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "npx projen"
-        }
-      ]
-    },
-    "upgrade-projen": {
-      "name": "upgrade-projen",
-      "description": "upgrade projen",
-      "env": {
-        "CI": "0"
-      },
-      "steps": [
-        {
-          "exec": "npm-check-updates --upgrade --target=minor --filter='projen'"
-        },
-        {
-          "exec": "yarn install --check-files"
+          "exec": "yarn upgrade"
         },
         {
           "exec": "npx projen"

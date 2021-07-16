@@ -34,10 +34,6 @@
       "type": "build"
     },
     {
-      "name": "constructs",
-      "type": "build"
-    },
-    {
       "name": "eslint",
       "type": "build"
     },
@@ -88,13 +84,7 @@
       "type": "build"
     },
     {
-      "name": "npm-check-updates",
-      "version": "^11",
-      "type": "build"
-    },
-    {
       "name": "projen",
-      "version": "^0.20.10",
       "type": "build"
     },
     {

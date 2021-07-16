@@ -31,6 +31,8 @@ jobs:
         run: yarn install --check-files --frozen-lockfile
       - name: Bump to next version
         run: npx projen bump
+        env:
+          PRERELEASE: beta
       - name: build
         run: npx projen build
       - name: Backup version file
@@ -153,7 +155,7 @@ jobs:
         run: npx -p jsii-release@latest jsii-release-golang
         env:
           GITHUB_TOKEN: ${{ secrets.GO_GITHUB_TOKEN }}
-          GIT_USER_NAME: GitHub Actions
-          GIT_USER_EMAIL: github-actions@github.com
+          GIT_USER_NAME: cdk8s-automation
+          GIT_USER_EMAIL: cdk8s-team@amazon.com
     container:
       image: jsii/superchain
