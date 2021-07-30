@@ -29,7 +29,6 @@
     "docgen": "npx projen docgen",
     "release": "npx projen release",
     "projen": "npx projen",
-    "start": "npx projen start",
     "import": "cdk8s -l typescript -o src/imports import k8s@1.17.0"
   },
   "author": {
@@ -43,8 +42,8 @@
     "@types/node": "^10.17.0",
     "@typescript-eslint/eslint-plugin": "^4.28.5",
     "@typescript-eslint/parser": "^4.28.5",
-    "cdk8s": "1.0.0-beta.26",
-    "cdk8s-cli": "1.0.0-beta.30",
+    "cdk8s": "1.0.0-beta.27",
+    "cdk8s-cli": "1.0.0-beta.31",
     "constructs": "^3.3.107",
     "eslint": "^7.31.0",
     "eslint-import-resolver-node": "^0.3.4",
@@ -58,13 +57,13 @@
     "jsii-pacmak": "^1.32.0",
     "json-schema": "^0.3.0",
     "npm-check-updates": "^11",
-    "projen": "^0.27.11",
+    "projen": "^0.27.12",
     "standard-version": "^9",
     "ts-jest": "^27.0.4",
     "typescript": "^4.3.5"
   },
   "peerDependencies": {
-    "cdk8s": "1.0.0-beta.26",
+    "cdk8s": "1.0.0-beta.27",
     "constructs": "^3.3.107"
   },
   "dependencies": {
