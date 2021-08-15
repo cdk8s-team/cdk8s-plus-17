@@ -2,9 +2,12 @@
 
 ### High level constructs for Kubernetes
 
-<br>
-
-![Beta](https://img.shields.io/badge/beta-informational.svg?style=for-the-badge)
+![Stability:Beta](https://img.shields.io/badge/stability-beta-orange)
+[![build](https://github.com/cdk8s-team/cdk8s-plus-17/workflows/release/badge.svg)](https://github.com/cdk8s-team/cdk8s-plus-17/actions/workflows/release.yml)
+[![npm version](https://badge.fury.io/js/cdk8s-plus-17.svg)](https://badge.fury.io/js/cdk8s-plus-17)
+[![PyPI version](https://badge.fury.io/py/cdk8s-plus-17.svg)](https://badge.fury.io/py/cdk8s-plus-17)
+[![NuGet version](https://badge.fury.io/nu/Org.Cdk8s.Plus17.svg)](https://badge.fury.io/nu/Org.Cdk8s.Plus17)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.cdk8s/cdk8s-plus-17/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.cdk8s/cdk8s-plus-17)
 
 **cdk8s+** is a software development framework that provides high level abstractions for authoring Kubernetes applications.
 Built on top of the auto generated building blocks provided by [cdk8s](../cdk8s), this library includes a hand crafted *construct*
