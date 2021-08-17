@@ -270,14 +270,14 @@ export class Service extends Resource {
       ports.push({
         name: port.name,
         port: port.port,
-        targetPort: port.targetPort,
+        targetPort: port.targetPort ? k8s.IntOrString.fromNumber(port.targetPort) : undefined,
         nodePort: port.nodePort,
         protocol: port.protocol,
       });
     }
 
     return this.type !== ServiceType.EXTERNAL_NAME ? {
-      clusterIP: this.clusterIP,
+      clusterIp: this.clusterIP,
       externalIPs: this._externalIPs,
       externalName: this.externalName,
       type: this.type,

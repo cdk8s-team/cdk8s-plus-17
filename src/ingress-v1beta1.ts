@@ -255,7 +255,7 @@ export class IngressV1Beta1Backend {
 
     return new IngressV1Beta1Backend({
       serviceName: service.name,
-      servicePort,
+      servicePort: k8s.IntOrString.fromNumber(servicePort),
     });
   }
 

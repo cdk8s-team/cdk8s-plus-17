@@ -51,17 +51,17 @@ test('Can add data to new secrets', () => {
   secret.addStringData('key', 'value');
 
   expect(Testing.synth(chart)).toMatchInlineSnapshot(`
-    Array [
-      Object {
-        "apiVersion": "v1",
-        "kind": "Secret",
-        "metadata": Object {
-          "name": "test-secret-c837fa76",
-        },
-        "stringData": Object {
-          "key": "value",
-        },
-      },
-    ]
-  `);
+Array [
+  Object {
+    "apiVersion": "v1",
+    "kind": "Secret",
+    "metadata": Object {
+      "name": "test-secret-c837fa76",
+    },
+    "stringData": Object {
+      "key": "value",
+    },
+  },
+]
+`);
 });

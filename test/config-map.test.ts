@@ -276,14 +276,14 @@ test('metadata is synthesized', () => {
 
   // THEN
   expect(Testing.synth(chart)).toMatchInlineSnapshot(`
-    Array [
-      Object {
-        "apiVersion": "v1",
-        "kind": "ConfigMap",
-        "metadata": Object {
-          "name": "my-name",
-        },
-      },
-    ]
-  `);
+Array [
+  Object {
+    "apiVersion": "v1",
+    "kind": "ConfigMap",
+    "metadata": Object {
+      "name": "my-name",
+    },
+  },
+]
+`);
 });
