@@ -63,8 +63,8 @@
     "typescript": "^4.3.5"
   },
   "peerDependencies": {
-    "cdk8s": "0.0.0",
-    "constructs": "0.0.0"
+    "cdk8s": "1.0.0-beta.27",
+    "constructs": "^3.3.116"
   },
   "dependencies": {
     "minimatch": "^3.0.4"
