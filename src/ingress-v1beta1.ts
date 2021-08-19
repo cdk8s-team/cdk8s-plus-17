@@ -55,7 +55,7 @@ export class IngressV1Beta1 extends Resource {
    */
   protected readonly apiObject: ApiObject;
 
-  private readonly _rulesPerHost: { [host: string]: k8s.HttpIngressPath[] } = {};
+  private readonly _rulesPerHost: { [host: string]: k8s.HttpIngressPathV1Beta1[] } = {};
   private _defaultBackend?: IngressV1Beta1Backend;
   private readonly _tlsConfig: IngressV1Beta1Tls[] = [];
 
@@ -169,8 +169,8 @@ export class IngressV1Beta1 extends Resource {
     }
   }
 
-  private synthRules(): undefined | k8s.IngressRule[] {
-    const rules = new Array<k8s.IngressRule>();
+  private synthRules(): undefined | k8s.IngressRuleV1Beta1[] {
+    const rules = new Array<k8s.IngressRuleV1Beta1>();
 
     for (const [host, paths] of Object.entries(this._rulesPerHost)) {
       rules.push({
@@ -186,12 +186,12 @@ export class IngressV1Beta1 extends Resource {
     this._tlsConfig.push(...tls);
   }
 
-  private tlsConfig(): undefined | k8s.IngressTls[] {
+  private tlsConfig(): undefined | k8s.IngressTlsv1Beta1[] {
     if (this._tlsConfig.length == 0) {
       return undefined;
     }
 
-    const tls = new Array<k8s.IngressTls>();
+    const tls = new Array<k8s.IngressTlsv1Beta1>();
     for (const entry of this._tlsConfig) {
       tls.push({
         hosts: entry.hosts,
@@ -259,7 +259,7 @@ export class IngressV1Beta1Backend {
     });
   }
 
-  private constructor(private readonly backend: k8s.IngressBackend) {
+  private constructor(private readonly backend: k8s.IngressBackendV1Beta1) {
 
   }
 
@@ -335,7 +335,7 @@ export interface IngressV1Beta1Tls {
   readonly secret?: ISecret;
 }
 
-function sortByPath(lhs: k8s.HttpIngressPath, rhs: k8s.HttpIngressPath) {
+function sortByPath(lhs: k8s.HttpIngressPathV1Beta1, rhs: k8s.HttpIngressPathV1Beta1) {
   const p1 = lhs.path ?? '';
   const p2 = rhs.path ?? '';
   return p1.localeCompare(p2);
