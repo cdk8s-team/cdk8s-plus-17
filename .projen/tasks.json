@@ -79,10 +79,13 @@
           "exec": "npx projen"
         },
         {
-          "spawn": "test"
+          "spawn": "import"
         },
         {
           "spawn": "compile"
+        },
+        {
+          "spawn": "test"
         },
         {
           "spawn": "package"
@@ -292,6 +295,15 @@
       "steps": [
         {
           "exec": "jsii-docgen"
+        }
+      ]
+    },
+    "import": {
+      "name": "import",
+      "description": "Updates imports based on latest version of cdk8s-cli.",
+      "steps": [
+        {
+          "exec": "cdk8s -l typescript -o src/imports import k8s@1.17.0"
         }
       ]
     },

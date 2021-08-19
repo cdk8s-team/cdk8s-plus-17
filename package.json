@@ -28,9 +28,9 @@
     "publish:nuget": "npx projen publish:nuget",
     "publish:golang": "npx projen publish:golang",
     "docgen": "npx projen docgen",
+    "import": "npx projen import",
     "release": "npx projen release",
-    "projen": "npx projen",
-    "import": "cdk8s -l typescript -o src/imports import k8s@1.17.0"
+    "projen": "npx projen"
   },
   "author": {
     "name": "Amazon Web Services",
@@ -44,7 +44,7 @@
     "@typescript-eslint/eslint-plugin": "^4.29.2",
     "@typescript-eslint/parser": "^4.29.2",
     "cdk8s": "1.0.0-beta.30",
-    "cdk8s-cli": "1.0.0-beta.37",
+    "cdk8s-cli": "1.0.0-beta.40",
     "constructs": "^3.3.126",
     "eslint": "^7.32.0",
     "eslint-import-resolver-node": "^0.3.6",
