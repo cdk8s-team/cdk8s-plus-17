@@ -24,6 +24,31 @@ test('Must be configured with at least one port', () => {
 
 });
 
+test('Can provide cluster IP', () => {
+  // GIVEN
+  const chart = Testing.chart();
+
+  // WHEN
+  new kplus.Service(chart, 'service', {
+    ports: [{ port: 9000 }],
+    clusterIP: '3000',
+  });
+
+  // THEN
+  const spec = Testing.synth(chart)[0].spec;
+  expect(spec).toEqual({
+    clusterIP: '3000',
+    externalIPs: [],
+    ports: [
+      {
+        port: 9000,
+      },
+    ],
+    selector: {},
+    type: 'ClusterIP',
+  });
+});
+
 test('Can select by label', () => {
 
   const chart = Testing.chart();

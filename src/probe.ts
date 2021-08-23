@@ -93,7 +93,7 @@ export abstract class Probe {
           ...parseProbeOptions(options),
           httpGet: {
             path,
-            port: options.port ?? container.port ?? 80,
+            port: k8s.IntOrString.fromNumber(options.port ?? container.port ?? 80),
           },
         };
       },

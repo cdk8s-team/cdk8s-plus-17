@@ -1,5 +1,6 @@
 import { Duration } from 'cdk8s';
 import { Container, Probe } from '../src';
+import { IntOrString } from '../src/imports/k8s';
 
 describe('fromHttpGet()', () => {
   test('defaults to the container port', () => {
@@ -14,7 +15,7 @@ describe('fromHttpGet()', () => {
       failureThreshold: 3,
       httpGet: {
         path: '/hello',
-        port: 5555,
+        port: IntOrString.fromNumber(5555),
       },
       initialDelaySeconds: undefined,
       periodSeconds: undefined,
@@ -35,7 +36,7 @@ describe('fromHttpGet()', () => {
       failureThreshold: 3,
       httpGet: {
         path: '/hello',
-        port: 1234,
+        port: IntOrString.fromNumber(1234),
       },
       initialDelaySeconds: undefined,
       periodSeconds: undefined,
@@ -61,7 +62,7 @@ describe('fromHttpGet()', () => {
     expect(min._toKube(container)).toEqual({
       httpGet: {
         path: '/hello',
-        port: 5555,
+        port: IntOrString.fromNumber(5555),
       },
       failureThreshold: 11,
       initialDelaySeconds: 60,

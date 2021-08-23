@@ -227,7 +227,7 @@ describe('Container', () => {
     // THEN
     expect(container._toKube().readinessProbe).toEqual({
       failureThreshold: 3,
-      httpGet: { path: '/ping', port: 80 },
+      httpGet: { path: '/ping', port: k8s.IntOrString.fromNumber(80) },
       initialDelaySeconds: undefined,
       periodSeconds: undefined,
       successThreshold: undefined,
@@ -235,7 +235,7 @@ describe('Container', () => {
     });
     expect(container._toKube().livenessProbe).toEqual({
       failureThreshold: 3,
-      httpGet: { path: '/live', port: 80 },
+      httpGet: { path: '/live', port: k8s.IntOrString.fromNumber(80) },
       initialDelaySeconds: undefined,
       periodSeconds: undefined,
       successThreshold: undefined,
@@ -243,7 +243,7 @@ describe('Container', () => {
     });
     expect(container._toKube().startupProbe).toEqual({
       failureThreshold: 3,
-      httpGet: { path: '/startup', port: 80 },
+      httpGet: { path: '/startup', port: k8s.IntOrString.fromNumber(80) },
       initialDelaySeconds: undefined,
       periodSeconds: undefined,
       successThreshold: undefined,

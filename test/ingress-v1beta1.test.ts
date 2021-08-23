@@ -1,6 +1,7 @@
 import { Testing, ApiObject } from 'cdk8s';
 import { Node } from 'constructs';
 import { IngressV1Beta1, IngressV1Beta1Backend, Secret, Service } from '../src';
+import * as k8s from '../src/imports/k8s';
 
 test('defaultChild', () => {
 
@@ -25,7 +26,7 @@ describe('IngressBackend', () => {
       // THEN
       expect(IngressV1Beta1Backend.fromService(service)._toKube()).toEqual({
         serviceName: 'test-my-service-c8493104',
-        servicePort: 8899,
+        servicePort: k8s.IntOrString.fromNumber(8899),
       });
     });
 
@@ -62,7 +63,7 @@ describe('IngressBackend', () => {
       // THEN
       expect(IngressV1Beta1Backend.fromService(service, { port: 6011 })._toKube()).toEqual({
         serviceName: 'test-my-service-c8493104',
-        servicePort: 6011,
+        servicePort: k8s.IntOrString.fromNumber(6011),
       });
     });
 
@@ -79,7 +80,7 @@ describe('IngressBackend', () => {
       // THEN
       expect(IngressV1Beta1Backend.fromService(service, { port: 8899 })._toKube()).toEqual({
         serviceName: 'test-my-service-c8493104',
-        servicePort: 8899,
+        servicePort: k8s.IntOrString.fromNumber(8899),
       });
     });
 
