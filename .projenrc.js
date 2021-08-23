@@ -74,13 +74,6 @@ const importTask = project.addTask('import', {
   exec: `cdk8s -l typescript -o ${importdir} import k8s@${K8S_VERSION}`,
   description: 'Updates imports based on latest version of cdk8s-cli.',
 });
-
-// custom build order
-project.buildTask.reset();
-project.buildTask.exec('npx projen');
-project.buildTask.spawn(importTask);
-project.buildTask.spawn(project.compileTask);
-project.buildTask.spawn(project.testTask);
-project.buildTask.spawn(project.packageTask);
+project.compileTask.prependSpawn(importTask);
 
 project.synth();

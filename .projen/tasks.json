@@ -37,6 +37,9 @@
       "description": "Only compile",
       "steps": [
         {
+          "spawn": "import"
+        },
+        {
           "exec": "jsii --silence-warnings=reserved-word --no-fix-peer-dependencies"
         },
         {
@@ -79,13 +82,10 @@
           "exec": "npx projen"
         },
         {
-          "spawn": "import"
+          "spawn": "test"
         },
         {
           "spawn": "compile"
-        },
-        {
-          "spawn": "test"
         },
         {
           "spawn": "package"
