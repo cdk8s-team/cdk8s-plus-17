@@ -40,7 +40,7 @@ const project = new JsiiProject({
   ],
 
   defaultReleaseBranch: 'main',
-  minNodeVersion: '12.7.0',
+  minNodeVersion: '12.13.0',
 
   // jsii configuration
   publishToMaven: {
