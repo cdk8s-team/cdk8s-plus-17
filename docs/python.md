@@ -210,6 +210,10 @@ The name of the config map to import.
 
 ##### `binary_data`<sup>Required</sup> <a name="cdk8s_plus_17.ConfigMap.property.binary_data"></a>
 
+```python
+binary_data: typing.Mapping[str]
+```
+
 - *Type:* typing.Mapping[`str`]
 
 The binary data associated with this config map.
@@ -219,6 +223,10 @@ Returns a copy. To add data records, use `addBinaryData()` or `addData()`.
 ---
 
 ##### `data`<sup>Required</sup> <a name="cdk8s_plus_17.ConfigMap.property.data"></a>
+
+```python
+data: typing.Mapping[str]
+```
 
 - *Type:* typing.Mapping[`str`]
 
@@ -642,6 +650,10 @@ The label value.
 
 ##### `containers`<sup>Required</sup> <a name="cdk8s_plus_17.Deployment.property.containers"></a>
 
+```python
+containers: typing.List[Container]
+```
+
 - *Type:* typing.List[[`cdk8s_plus_17.Container`](#cdk8s_plus_17.Container)]
 
 The containers belonging to the pod.
@@ -651,6 +663,10 @@ Use `addContainer` to add containers.
 ---
 
 ##### `label_selector`<sup>Required</sup> <a name="cdk8s_plus_17.Deployment.property.label_selector"></a>
+
+```python
+label_selector: typing.Mapping[str]
+```
 
 - *Type:* typing.Mapping[`str`]
 
@@ -662,6 +678,10 @@ Returns a a copy. Use `selectByLabel()` to add labels.
 
 ##### `pod_metadata`<sup>Required</sup> <a name="cdk8s_plus_17.Deployment.property.pod_metadata"></a>
 
+```python
+pod_metadata: ApiObjectMetadataDefinition
+```
+
 - *Type:* [`cdk8s.ApiObjectMetadataDefinition`](#cdk8s.ApiObjectMetadataDefinition)
 
 Provides read/write access to the underlying pod metadata of the resource.
@@ -670,6 +690,10 @@ Provides read/write access to the underlying pod metadata of the resource.
 
 ##### `replicas`<sup>Required</sup> <a name="cdk8s_plus_17.Deployment.property.replicas"></a>
 
+```python
+replicas: typing.Union[int, float]
+```
+
 - *Type:* `typing.Union[int, float]`
 
 Number of desired pods.
@@ -677,6 +701,10 @@ Number of desired pods.
 ---
 
 ##### `volumes`<sup>Required</sup> <a name="cdk8s_plus_17.Deployment.property.volumes"></a>
+
+```python
+volumes: typing.List[Volume]
+```
 
 - *Type:* typing.List[[`cdk8s_plus_17.Volume`](#cdk8s_plus_17.Volume)]
 
@@ -688,6 +716,10 @@ Use `addVolume` to add volumes.
 
 ##### `restart_policy`<sup>Optional</sup> <a name="cdk8s_plus_17.Deployment.property.restart_policy"></a>
 
+```python
+restart_policy: RestartPolicy
+```
+
 - *Type:* [`cdk8s_plus_17.RestartPolicy`](#cdk8s_plus_17.RestartPolicy)
 
 Restart policy for all containers within the pod.
@@ -695,6 +727,10 @@ Restart policy for all containers within the pod.
 ---
 
 ##### `service_account`<sup>Optional</sup> <a name="cdk8s_plus_17.Deployment.property.service_account"></a>
+
+```python
+service_account: IServiceAccount
+```
 
 - *Type:* [`cdk8s_plus_17.IServiceAccount`](#cdk8s_plus_17.IServiceAccount)
 
@@ -1276,6 +1312,10 @@ def add_volume(
 
 ##### `containers`<sup>Required</sup> <a name="cdk8s_plus_17.Job.property.containers"></a>
 
+```python
+containers: typing.List[Container]
+```
+
 - *Type:* typing.List[[`cdk8s_plus_17.Container`](#cdk8s_plus_17.Container)]
 
 The containers belonging to the pod.
@@ -1286,6 +1326,10 @@ Use `addContainer` to add containers.
 
 ##### `pod_metadata`<sup>Required</sup> <a name="cdk8s_plus_17.Job.property.pod_metadata"></a>
 
+```python
+pod_metadata: ApiObjectMetadataDefinition
+```
+
 - *Type:* [`cdk8s.ApiObjectMetadataDefinition`](#cdk8s.ApiObjectMetadataDefinition)
 
 Provides read/write access to the underlying pod metadata of the resource.
@@ -1293,6 +1337,10 @@ Provides read/write access to the underlying pod metadata of the resource.
 ---
 
 ##### `volumes`<sup>Required</sup> <a name="cdk8s_plus_17.Job.property.volumes"></a>
+
+```python
+volumes: typing.List[Volume]
+```
 
 - *Type:* typing.List[[`cdk8s_plus_17.Volume`](#cdk8s_plus_17.Volume)]
 
@@ -1304,6 +1352,10 @@ Use `addVolume` to add volumes.
 
 ##### `active_deadline`<sup>Optional</sup> <a name="cdk8s_plus_17.Job.property.active_deadline"></a>
 
+```python
+active_deadline: Duration
+```
+
 - *Type:* [`cdk8s.Duration`](#cdk8s.Duration)
 
 Duration before job is terminated.
@@ -1314,6 +1366,10 @@ If undefined, there is no deadline.
 
 ##### `backoff_limit`<sup>Optional</sup> <a name="cdk8s_plus_17.Job.property.backoff_limit"></a>
 
+```python
+backoff_limit: typing.Union[int, float]
+```
+
 - *Type:* `typing.Union[int, float]`
 
 Number of retries before marking failed.
@@ -1321,6 +1377,10 @@ Number of retries before marking failed.
 ---
 
 ##### `restart_policy`<sup>Optional</sup> <a name="cdk8s_plus_17.Job.property.restart_policy"></a>
+
+```python
+restart_policy: RestartPolicy
+```
 
 - *Type:* [`cdk8s_plus_17.RestartPolicy`](#cdk8s_plus_17.RestartPolicy)
 
@@ -1330,6 +1390,10 @@ Restart policy for all containers within the pod.
 
 ##### `service_account`<sup>Optional</sup> <a name="cdk8s_plus_17.Job.property.service_account"></a>
 
+```python
+service_account: IServiceAccount
+```
+
 - *Type:* [`cdk8s_plus_17.IServiceAccount`](#cdk8s_plus_17.IServiceAccount)
 
 The service account used to run this pod.
@@ -1337,6 +1401,10 @@ The service account used to run this pod.
 ---
 
 ##### `ttl_after_finished`<sup>Optional</sup> <a name="cdk8s_plus_17.Job.property.ttl_after_finished"></a>
+
+```python
+ttl_after_finished: Duration
+```
 
 - *Type:* [`cdk8s.Duration`](#cdk8s.Duration)
 
@@ -1621,6 +1689,10 @@ def add_volume(
 
 ##### `containers`<sup>Required</sup> <a name="cdk8s_plus_17.Pod.property.containers"></a>
 
+```python
+containers: typing.List[Container]
+```
+
 - *Type:* typing.List[[`cdk8s_plus_17.Container`](#cdk8s_plus_17.Container)]
 
 The containers belonging to the pod.
@@ -1630,6 +1702,10 @@ Use `addContainer` to add containers.
 ---
 
 ##### `volumes`<sup>Required</sup> <a name="cdk8s_plus_17.Pod.property.volumes"></a>
+
+```python
+volumes: typing.List[Volume]
+```
 
 - *Type:* typing.List[[`cdk8s_plus_17.Volume`](#cdk8s_plus_17.Volume)]
 
@@ -1641,6 +1717,10 @@ Use `addVolume` to add volumes.
 
 ##### `restart_policy`<sup>Optional</sup> <a name="cdk8s_plus_17.Pod.property.restart_policy"></a>
 
+```python
+restart_policy: RestartPolicy
+```
+
 - *Type:* [`cdk8s_plus_17.RestartPolicy`](#cdk8s_plus_17.RestartPolicy)
 
 Restart policy for all containers within the pod.
@@ -1648,6 +1728,10 @@ Restart policy for all containers within the pod.
 ---
 
 ##### `service_account`<sup>Optional</sup> <a name="cdk8s_plus_17.Pod.property.service_account"></a>
+
+```python
+service_account: IServiceAccount
+```
 
 - *Type:* [`cdk8s_plus_17.IServiceAccount`](#cdk8s_plus_17.IServiceAccount)
 
@@ -1712,11 +1796,19 @@ A factory for attaching `Node`s to the construct.
 
 ##### `metadata`<sup>Required</sup> <a name="cdk8s_plus_17.Resource.property.metadata"></a>
 
+```python
+metadata: ApiObjectMetadataDefinition
+```
+
 - *Type:* [`cdk8s.ApiObjectMetadataDefinition`](#cdk8s.ApiObjectMetadataDefinition)
 
 ---
 
 ##### `name`<sup>Required</sup> <a name="cdk8s_plus_17.Resource.property.name"></a>
+
+```python
+name: str
+```
 
 - *Type:* `str`
 
@@ -2168,6 +2260,10 @@ The port number the service will redirect to.
 
 ##### `ports`<sup>Required</sup> <a name="cdk8s_plus_17.Service.property.ports"></a>
 
+```python
+ports: typing.List[ServicePort]
+```
+
 - *Type:* typing.List[[`cdk8s_plus_17.ServicePort`](#cdk8s_plus_17.ServicePort)]
 
 Ports for this service.
@@ -2178,6 +2274,10 @@ Use `serve()` to expose additional service ports.
 
 ##### `selector`<sup>Required</sup> <a name="cdk8s_plus_17.Service.property.selector"></a>
 
+```python
+selector: typing.Mapping[str]
+```
+
 - *Type:* typing.Mapping[`str`]
 
 Returns the labels which are used to select pods for this service.
@@ -2185,6 +2285,10 @@ Returns the labels which are used to select pods for this service.
 ---
 
 ##### `type`<sup>Required</sup> <a name="cdk8s_plus_17.Service.property.type"></a>
+
+```python
+type: ServiceType
+```
 
 - *Type:* [`cdk8s_plus_17.ServiceType`](#cdk8s_plus_17.ServiceType)
 
@@ -2194,6 +2298,10 @@ Determines how the Service is exposed.
 
 ##### `cluster_i_p`<sup>Optional</sup> <a name="cdk8s_plus_17.Service.property.cluster_i_p"></a>
 
+```python
+cluster_i_p: str
+```
+
 - *Type:* `str`
 
 The IP address of the service and is usually assigned randomly by the master.
@@ -2201,6 +2309,10 @@ The IP address of the service and is usually assigned randomly by the master.
 ---
 
 ##### `external_name`<sup>Optional</sup> <a name="cdk8s_plus_17.Service.property.external_name"></a>
+
+```python
+external_name: str
+```
 
 - *Type:* `str`
 
@@ -2308,6 +2420,10 @@ The name of the service account resource.
 #### Properties <a name="Properties"></a>
 
 ##### `secrets`<sup>Required</sup> <a name="cdk8s_plus_17.ServiceAccount.property.secrets"></a>
+
+```python
+secrets: typing.List[ISecret]
+```
 
 - *Type:* typing.List[[`cdk8s_plus_17.ISecret`](#cdk8s_plus_17.ISecret)]
 
@@ -2690,6 +2806,10 @@ The label value.
 
 ##### `containers`<sup>Required</sup> <a name="cdk8s_plus_17.StatefulSet.property.containers"></a>
 
+```python
+containers: typing.List[Container]
+```
+
 - *Type:* typing.List[[`cdk8s_plus_17.Container`](#cdk8s_plus_17.Container)]
 
 The containers belonging to the pod.
@@ -2699,6 +2819,10 @@ Use `addContainer` to add containers.
 ---
 
 ##### `label_selector`<sup>Required</sup> <a name="cdk8s_plus_17.StatefulSet.property.label_selector"></a>
+
+```python
+label_selector: typing.Mapping[str]
+```
 
 - *Type:* typing.Mapping[`str`]
 
@@ -2710,6 +2834,10 @@ Returns a a copy. Use `selectByLabel()` to add labels.
 
 ##### `pod_management_policy`<sup>Required</sup> <a name="cdk8s_plus_17.StatefulSet.property.pod_management_policy"></a>
 
+```python
+pod_management_policy: PodManagementPolicy
+```
+
 - *Type:* [`cdk8s_plus_17.PodManagementPolicy`](#cdk8s_plus_17.PodManagementPolicy)
 
 Management policy to use for the set.
@@ -2717,6 +2845,10 @@ Management policy to use for the set.
 ---
 
 ##### `pod_metadata`<sup>Required</sup> <a name="cdk8s_plus_17.StatefulSet.property.pod_metadata"></a>
+
+```python
+pod_metadata: ApiObjectMetadataDefinition
+```
 
 - *Type:* [`cdk8s.ApiObjectMetadataDefinition`](#cdk8s.ApiObjectMetadataDefinition)
 
@@ -2726,6 +2858,10 @@ Provides read/write access to the underlying pod metadata of the resource.
 
 ##### `replicas`<sup>Required</sup> <a name="cdk8s_plus_17.StatefulSet.property.replicas"></a>
 
+```python
+replicas: typing.Union[int, float]
+```
+
 - *Type:* `typing.Union[int, float]`
 
 Number of desired pods.
@@ -2733,6 +2869,10 @@ Number of desired pods.
 ---
 
 ##### `volumes`<sup>Required</sup> <a name="cdk8s_plus_17.StatefulSet.property.volumes"></a>
+
+```python
+volumes: typing.List[Volume]
+```
 
 - *Type:* typing.List[[`cdk8s_plus_17.Volume`](#cdk8s_plus_17.Volume)]
 
@@ -2744,6 +2884,10 @@ Use `addVolume` to add volumes.
 
 ##### `restart_policy`<sup>Optional</sup> <a name="cdk8s_plus_17.StatefulSet.property.restart_policy"></a>
 
+```python
+restart_policy: RestartPolicy
+```
+
 - *Type:* [`cdk8s_plus_17.RestartPolicy`](#cdk8s_plus_17.RestartPolicy)
 
 Restart policy for all containers within the pod.
@@ -2751,6 +2895,10 @@ Restart policy for all containers within the pod.
 ---
 
 ##### `service_account`<sup>Optional</sup> <a name="cdk8s_plus_17.StatefulSet.property.service_account"></a>
+
+```python
+service_account: IServiceAccount
+```
 
 - *Type:* [`cdk8s_plus_17.IServiceAccount`](#cdk8s_plus_17.IServiceAccount)
 
@@ -2778,6 +2926,10 @@ cdk8s_plus_17.AddDirectoryOptions(
 
 ##### `exclude`<sup>Optional</sup> <a name="cdk8s_plus_17.AddDirectoryOptions.property.exclude"></a>
 
+```python
+exclude: typing.List[str]
+```
+
 - *Type:* typing.List[`str`]
 - *Default:* include all files
 
@@ -2786,6 +2938,10 @@ Glob patterns to exclude when adding files.
 ---
 
 ##### `key_prefix`<sup>Optional</sup> <a name="cdk8s_plus_17.AddDirectoryOptions.property.key_prefix"></a>
+
+```python
+key_prefix: str
+```
 
 - *Type:* `str`
 - *Default:* ""
@@ -2814,6 +2970,10 @@ cdk8s_plus_17.CommandProbeOptions(
 
 ##### `failure_threshold`<sup>Optional</sup> <a name="cdk8s_plus_17.CommandProbeOptions.property.failure_threshold"></a>
 
+```python
+failure_threshold: typing.Union[int, float]
+```
+
 - *Type:* `typing.Union[int, float]`
 - *Default:* 3
 
@@ -2824,6 +2984,10 @@ Defaults to 3. Minimum value is 1.
 ---
 
 ##### `initial_delay_seconds`<sup>Optional</sup> <a name="cdk8s_plus_17.CommandProbeOptions.property.initial_delay_seconds"></a>
+
+```python
+initial_delay_seconds: Duration
+```
 
 - *Type:* [`cdk8s.Duration`](#cdk8s.Duration)
 - *Default:* immediate
@@ -2836,6 +3000,10 @@ Number of seconds after the container has started before liveness probes are ini
 
 ##### `period_seconds`<sup>Optional</sup> <a name="cdk8s_plus_17.CommandProbeOptions.property.period_seconds"></a>
 
+```python
+period_seconds: Duration
+```
+
 - *Type:* [`cdk8s.Duration`](#cdk8s.Duration)
 - *Default:* Duration.seconds(10) Minimum value is 1.
 
@@ -2847,6 +3015,10 @@ Default to 10 seconds. Minimum value is 1.
 
 ##### `success_threshold`<sup>Optional</sup> <a name="cdk8s_plus_17.CommandProbeOptions.property.success_threshold"></a>
 
+```python
+success_threshold: typing.Union[int, float]
+```
+
 - *Type:* `typing.Union[int, float]`
 - *Default:* 1 Must be 1 for liveness and startup. Minimum value is 1.
 
@@ -2857,6 +3029,10 @@ Must be 1 for liveness and startup. Minimum value is 1.
 ---
 
 ##### `timeout_seconds`<sup>Optional</sup> <a name="cdk8s_plus_17.CommandProbeOptions.property.timeout_seconds"></a>
+
+```python
+timeout_seconds: Duration
+```
 
 - *Type:* [`cdk8s.Duration`](#cdk8s.Duration)
 - *Default:* Duration.seconds(1)
@@ -2887,6 +3063,10 @@ cdk8s_plus_17.ConfigMapProps(
 
 ##### `metadata`<sup>Optional</sup> <a name="cdk8s_plus_17.ConfigMapProps.property.metadata"></a>
 
+```python
+metadata: ApiObjectMetadata
+```
+
 - *Type:* [`cdk8s.ApiObjectMetadata`](#cdk8s.ApiObjectMetadata)
 
 Metadata that all persisted resources must have, which includes all objects users must create.
@@ -2894,6 +3074,10 @@ Metadata that all persisted resources must have, which includes all objects user
 ---
 
 ##### `binary_data`<sup>Optional</sup> <a name="cdk8s_plus_17.ConfigMapProps.property.binary_data"></a>
+
+```python
+binary_data: typing.Mapping[str]
+```
 
 - *Type:* typing.Mapping[`str`]
 
@@ -2910,6 +3094,10 @@ You can also add binary data using `configMap.addBinaryData()`.
 ---
 
 ##### `data`<sup>Optional</sup> <a name="cdk8s_plus_17.ConfigMapProps.property.data"></a>
+
+```python
+data: typing.Mapping[str]
+```
 
 - *Type:* typing.Mapping[`str`]
 
@@ -2943,6 +3131,10 @@ cdk8s_plus_17.ConfigMapVolumeOptions(
 
 ##### `default_mode`<sup>Optional</sup> <a name="cdk8s_plus_17.ConfigMapVolumeOptions.property.default_mode"></a>
 
+```python
+default_mode: typing.Union[int, float]
+```
+
 - *Type:* `typing.Union[int, float]`
 - *Default:* 0644. Directories within the path are not affected by this
 setting. This might be in conflict with other options that affect the file
@@ -2959,6 +3151,10 @@ file mode, like fsGroup, and the result can be other mode bits set.
 
 ##### `items`<sup>Optional</sup> <a name="cdk8s_plus_17.ConfigMapVolumeOptions.property.items"></a>
 
+```python
+items: typing.Mapping[PathMapping]
+```
+
 - *Type:* typing.Mapping[[`cdk8s_plus_17.PathMapping`](#cdk8s_plus_17.PathMapping)]
 - *Default:* no mapping
 
@@ -2974,6 +3170,10 @@ contain the '..' path or start with '..'.
 
 ##### `name`<sup>Optional</sup> <a name="cdk8s_plus_17.ConfigMapVolumeOptions.property.name"></a>
 
+```python
+name: str
+```
+
 - *Type:* `str`
 - *Default:* auto-generated
 
@@ -2982,6 +3182,10 @@ The volume name.
 ---
 
 ##### `optional`<sup>Optional</sup> <a name="cdk8s_plus_17.ConfigMapVolumeOptions.property.optional"></a>
+
+```python
+optional: bool
+```
 
 - *Type:* `bool`
 - *Default:* undocumented
@@ -3017,6 +3221,10 @@ cdk8s_plus_17.ContainerProps(
 
 ##### `image`<sup>Required</sup> <a name="cdk8s_plus_17.ContainerProps.property.image"></a>
 
+```python
+image: str
+```
+
 - *Type:* `str`
 
 Docker image name.
@@ -3024,6 +3232,10 @@ Docker image name.
 ---
 
 ##### `args`<sup>Optional</sup> <a name="cdk8s_plus_17.ContainerProps.property.args"></a>
+
+```python
+args: typing.List[str]
+```
 
 - *Type:* typing.List[`str`]
 - *Default:* []
@@ -3044,6 +3256,10 @@ Cannot be updated.
 
 ##### `command`<sup>Optional</sup> <a name="cdk8s_plus_17.ContainerProps.property.command"></a>
 
+```python
+command: typing.List[str]
+```
+
 - *Type:* typing.List[`str`]
 - *Default:* The docker image's ENTRYPOINT.
 
@@ -3058,6 +3274,10 @@ More info: https://kubernetes.io/docs/tasks/inject-data-application/define-comma
 
 ##### `env`<sup>Optional</sup> <a name="cdk8s_plus_17.ContainerProps.property.env"></a>
 
+```python
+env: typing.Mapping[EnvValue]
+```
+
 - *Type:* typing.Mapping[[`cdk8s_plus_17.EnvValue`](#cdk8s_plus_17.EnvValue)]
 - *Default:* No environment variables.
 
@@ -3069,6 +3289,10 @@ Cannot be updated.
 
 ##### `image_pull_policy`<sup>Optional</sup> <a name="cdk8s_plus_17.ContainerProps.property.image_pull_policy"></a>
 
+```python
+image_pull_policy: ImagePullPolicy
+```
+
 - *Type:* [`cdk8s_plus_17.ImagePullPolicy`](#cdk8s_plus_17.ImagePullPolicy)
 - *Default:* ImagePullPolicy.ALWAYS
 
@@ -3077,6 +3301,10 @@ Image pull policy for this container.
 ---
 
 ##### `liveness`<sup>Optional</sup> <a name="cdk8s_plus_17.ContainerProps.property.liveness"></a>
+
+```python
+liveness: Probe
+```
 
 - *Type:* [`cdk8s_plus_17.Probe`](#cdk8s_plus_17.Probe)
 - *Default:* no liveness probe is defined
@@ -3089,6 +3317,10 @@ Container will be restarted if the probe fails.
 
 ##### `name`<sup>Optional</sup> <a name="cdk8s_plus_17.ContainerProps.property.name"></a>
 
+```python
+name: str
+```
+
 - *Type:* `str`
 - *Default:* 'main'
 
@@ -3099,6 +3331,10 @@ Each container in a pod must have a unique name (DNS_LABEL). Cannot be updated.
 ---
 
 ##### `port`<sup>Optional</sup> <a name="cdk8s_plus_17.ContainerProps.property.port"></a>
+
+```python
+port: typing.Union[int, float]
+```
 
 - *Type:* `typing.Union[int, float]`
 - *Default:* No port is exposed.
@@ -3111,6 +3347,10 @@ This must be a valid port number, 0 < x < 65536.
 
 ##### `readiness`<sup>Optional</sup> <a name="cdk8s_plus_17.ContainerProps.property.readiness"></a>
 
+```python
+readiness: Probe
+```
+
 - *Type:* [`cdk8s_plus_17.Probe`](#cdk8s_plus_17.Probe)
 - *Default:* no readiness probe is defined
 
@@ -3119,6 +3359,10 @@ Determines when the container is ready to serve traffic.
 ---
 
 ##### `startup`<sup>Optional</sup> <a name="cdk8s_plus_17.ContainerProps.property.startup"></a>
+
+```python
+startup: Probe
+```
 
 - *Type:* [`cdk8s_plus_17.Probe`](#cdk8s_plus_17.Probe)
 - *Default:* no startup probe is defined.
@@ -3131,6 +3375,10 @@ If specified, no other probes are executed until this completes successfully
 
 ##### `volume_mounts`<sup>Optional</sup> <a name="cdk8s_plus_17.ContainerProps.property.volume_mounts"></a>
 
+```python
+volume_mounts: typing.List[VolumeMount]
+```
+
 - *Type:* typing.List[[`cdk8s_plus_17.VolumeMount`](#cdk8s_plus_17.VolumeMount)]
 
 Pod volumes to mount into the container's filesystem.
@@ -3140,6 +3388,10 @@ Cannot be updated.
 ---
 
 ##### `working_dir`<sup>Optional</sup> <a name="cdk8s_plus_17.ContainerProps.property.working_dir"></a>
+
+```python
+working_dir: str
+```
 
 - *Type:* `str`
 - *Default:* The container runtime's default.
@@ -3173,6 +3425,10 @@ cdk8s_plus_17.DeploymentProps(
 
 ##### `metadata`<sup>Optional</sup> <a name="cdk8s_plus_17.DeploymentProps.property.metadata"></a>
 
+```python
+metadata: ApiObjectMetadata
+```
+
 - *Type:* [`cdk8s.ApiObjectMetadata`](#cdk8s.ApiObjectMetadata)
 
 Metadata that all persisted resources must have, which includes all objects users must create.
@@ -3180,6 +3436,10 @@ Metadata that all persisted resources must have, which includes all objects user
 ---
 
 ##### `containers`<sup>Optional</sup> <a name="cdk8s_plus_17.DeploymentProps.property.containers"></a>
+
+```python
+containers: typing.List[ContainerProps]
+```
 
 - *Type:* typing.List[[`cdk8s_plus_17.ContainerProps`](#cdk8s_plus_17.ContainerProps)]
 - *Default:* No containers. Note that a pod spec must include at least one container.
@@ -3195,6 +3455,10 @@ You can add additionnal containers using `podSpec.addContainer()`
 
 ##### `restart_policy`<sup>Optional</sup> <a name="cdk8s_plus_17.DeploymentProps.property.restart_policy"></a>
 
+```python
+restart_policy: RestartPolicy
+```
+
 - *Type:* [`cdk8s_plus_17.RestartPolicy`](#cdk8s_plus_17.RestartPolicy)
 - *Default:* RestartPolicy.ALWAYS
 
@@ -3205,6 +3469,10 @@ Restart policy for all containers within the pod.
 ---
 
 ##### `service_account`<sup>Optional</sup> <a name="cdk8s_plus_17.DeploymentProps.property.service_account"></a>
+
+```python
+service_account: IServiceAccount
+```
 
 - *Type:* [`cdk8s_plus_17.IServiceAccount`](#cdk8s_plus_17.IServiceAccount)
 - *Default:* No service account.
@@ -3224,6 +3492,10 @@ Account (for example, default).
 
 ##### `volumes`<sup>Optional</sup> <a name="cdk8s_plus_17.DeploymentProps.property.volumes"></a>
 
+```python
+volumes: typing.List[Volume]
+```
+
 - *Type:* typing.List[[`cdk8s_plus_17.Volume`](#cdk8s_plus_17.Volume)]
 - *Default:* No volumes.
 
@@ -3237,6 +3509,10 @@ You can also add volumes later using `podSpec.addVolume()`
 
 ##### `pod_metadata`<sup>Optional</sup> <a name="cdk8s_plus_17.DeploymentProps.property.pod_metadata"></a>
 
+```python
+pod_metadata: ApiObjectMetadata
+```
+
 - *Type:* [`cdk8s.ApiObjectMetadata`](#cdk8s.ApiObjectMetadata)
 
 The pod metadata.
@@ -3244,6 +3520,10 @@ The pod metadata.
 ---
 
 ##### `default_selector`<sup>Optional</sup> <a name="cdk8s_plus_17.DeploymentProps.property.default_selector"></a>
+
+```python
+default_selector: bool
+```
 
 - *Type:* `bool`
 - *Default:* true
@@ -3256,6 +3536,10 @@ If this is set to `false` you must define your selector through
 ---
 
 ##### `replicas`<sup>Optional</sup> <a name="cdk8s_plus_17.DeploymentProps.property.replicas"></a>
+
+```python
+replicas: typing.Union[int, float]
+```
 
 - *Type:* `typing.Union[int, float]`
 - *Default:* 1
@@ -3281,6 +3565,10 @@ cdk8s_plus_17.EmptyDirVolumeOptions(
 
 ##### `medium`<sup>Optional</sup> <a name="cdk8s_plus_17.EmptyDirVolumeOptions.property.medium"></a>
 
+```python
+medium: EmptyDirMedium
+```
+
 - *Type:* [`cdk8s_plus_17.EmptyDirMedium`](#cdk8s_plus_17.EmptyDirMedium)
 - *Default:* EmptyDirMedium.DEFAULT
 
@@ -3295,6 +3583,10 @@ against your Container's memory limit.
 ---
 
 ##### `size_limit`<sup>Optional</sup> <a name="cdk8s_plus_17.EmptyDirVolumeOptions.property.size_limit"></a>
+
+```python
+size_limit: Size
+```
 
 - *Type:* [`cdk8s.Size`](#cdk8s.Size)
 - *Default:* limit is undefined
@@ -3324,6 +3616,10 @@ cdk8s_plus_17.EnvValueFromConfigMapOptions(
 
 ##### `optional`<sup>Optional</sup> <a name="cdk8s_plus_17.EnvValueFromConfigMapOptions.property.optional"></a>
 
+```python
+optional: bool
+```
+
 - *Type:* `bool`
 - *Default:* false
 
@@ -3346,6 +3642,10 @@ cdk8s_plus_17.EnvValueFromProcessOptions(
 ```
 
 ##### `required`<sup>Optional</sup> <a name="cdk8s_plus_17.EnvValueFromProcessOptions.property.required"></a>
+
+```python
+required: bool
+```
 
 - *Type:* `bool`
 - *Default:* false
@@ -3371,6 +3671,10 @@ cdk8s_plus_17.EnvValueFromSecretOptions(
 ```
 
 ##### `optional`<sup>Optional</sup> <a name="cdk8s_plus_17.EnvValueFromSecretOptions.property.optional"></a>
+
+```python
+optional: bool
+```
 
 - *Type:* `bool`
 - *Default:* false
@@ -3398,6 +3702,10 @@ cdk8s_plus_17.ExposeOptions(
 
 ##### `name`<sup>Optional</sup> <a name="cdk8s_plus_17.ExposeOptions.property.name"></a>
 
+```python
+name: str
+```
+
 - *Type:* `str`
 - *Default:* undefined Uses the system generated name.
 
@@ -3408,6 +3716,10 @@ This will be set on the Service.metadata and must be a DNS_LABEL
 ---
 
 ##### `protocol`<sup>Optional</sup> <a name="cdk8s_plus_17.ExposeOptions.property.protocol"></a>
+
+```python
+protocol: Protocol
+```
 
 - *Type:* [`cdk8s_plus_17.Protocol`](#cdk8s_plus_17.Protocol)
 - *Default:* Protocol.TCP
@@ -3420,6 +3732,10 @@ Supports "TCP", "UDP", and "SCTP". Default is TCP.
 
 ##### `service_type`<sup>Optional</sup> <a name="cdk8s_plus_17.ExposeOptions.property.service_type"></a>
 
+```python
+service_type: ServiceType
+```
+
 - *Type:* [`cdk8s_plus_17.ServiceType`](#cdk8s_plus_17.ServiceType)
 - *Default:* ClusterIP.
 
@@ -3428,6 +3744,10 @@ The type of the exposed service.
 ---
 
 ##### `target_port`<sup>Optional</sup> <a name="cdk8s_plus_17.ExposeOptions.property.target_port"></a>
+
+```python
+target_port: typing.Union[int, float]
+```
 
 - *Type:* `typing.Union[int, float]`
 - *Default:* The port of the first container in the deployment (ie. containers[0].port)
@@ -3457,6 +3777,10 @@ cdk8s_plus_17.HttpGetProbeOptions(
 
 ##### `failure_threshold`<sup>Optional</sup> <a name="cdk8s_plus_17.HttpGetProbeOptions.property.failure_threshold"></a>
 
+```python
+failure_threshold: typing.Union[int, float]
+```
+
 - *Type:* `typing.Union[int, float]`
 - *Default:* 3
 
@@ -3467,6 +3791,10 @@ Defaults to 3. Minimum value is 1.
 ---
 
 ##### `initial_delay_seconds`<sup>Optional</sup> <a name="cdk8s_plus_17.HttpGetProbeOptions.property.initial_delay_seconds"></a>
+
+```python
+initial_delay_seconds: Duration
+```
 
 - *Type:* [`cdk8s.Duration`](#cdk8s.Duration)
 - *Default:* immediate
@@ -3479,6 +3807,10 @@ Number of seconds after the container has started before liveness probes are ini
 
 ##### `period_seconds`<sup>Optional</sup> <a name="cdk8s_plus_17.HttpGetProbeOptions.property.period_seconds"></a>
 
+```python
+period_seconds: Duration
+```
+
 - *Type:* [`cdk8s.Duration`](#cdk8s.Duration)
 - *Default:* Duration.seconds(10) Minimum value is 1.
 
@@ -3490,6 +3822,10 @@ Default to 10 seconds. Minimum value is 1.
 
 ##### `success_threshold`<sup>Optional</sup> <a name="cdk8s_plus_17.HttpGetProbeOptions.property.success_threshold"></a>
 
+```python
+success_threshold: typing.Union[int, float]
+```
+
 - *Type:* `typing.Union[int, float]`
 - *Default:* 1 Must be 1 for liveness and startup. Minimum value is 1.
 
@@ -3500,6 +3836,10 @@ Must be 1 for liveness and startup. Minimum value is 1.
 ---
 
 ##### `timeout_seconds`<sup>Optional</sup> <a name="cdk8s_plus_17.HttpGetProbeOptions.property.timeout_seconds"></a>
+
+```python
+timeout_seconds: Duration
+```
 
 - *Type:* [`cdk8s.Duration`](#cdk8s.Duration)
 - *Default:* Duration.seconds(1)
@@ -3513,6 +3853,10 @@ Defaults to 1 second. Minimum value is 1.
 ---
 
 ##### `port`<sup>Optional</sup> <a name="cdk8s_plus_17.HttpGetProbeOptions.property.port"></a>
+
+```python
+port: typing.Union[int, float]
+```
 
 - *Type:* `typing.Union[int, float]`
 - *Default:* defaults to `container.port`.
@@ -3540,6 +3884,10 @@ cdk8s_plus_17.IngressV1Beta1Props(
 
 ##### `metadata`<sup>Optional</sup> <a name="cdk8s_plus_17.IngressV1Beta1Props.property.metadata"></a>
 
+```python
+metadata: ApiObjectMetadata
+```
+
 - *Type:* [`cdk8s.ApiObjectMetadata`](#cdk8s.ApiObjectMetadata)
 
 Metadata that all persisted resources must have, which includes all objects users must create.
@@ -3547,6 +3895,10 @@ Metadata that all persisted resources must have, which includes all objects user
 ---
 
 ##### `default_backend`<sup>Optional</sup> <a name="cdk8s_plus_17.IngressV1Beta1Props.property.default_backend"></a>
+
+```python
+default_backend: IngressV1Beta1Backend
+```
 
 - *Type:* [`cdk8s_plus_17.IngressV1Beta1Backend`](#cdk8s_plus_17.IngressV1Beta1Backend)
 
@@ -3558,6 +3910,10 @@ adding a rule with both `path` and `host` undefined.
 ---
 
 ##### `rules`<sup>Optional</sup> <a name="cdk8s_plus_17.IngressV1Beta1Props.property.rules"></a>
+
+```python
+rules: typing.List[IngressV1Beta1Rule]
+```
 
 - *Type:* typing.List[[`cdk8s_plus_17.IngressV1Beta1Rule`](#cdk8s_plus_17.IngressV1Beta1Rule)]
 
@@ -3573,6 +3929,10 @@ You can also add rules later using `addRule()`, `addHostRule()`,
 ---
 
 ##### `tls`<sup>Optional</sup> <a name="cdk8s_plus_17.IngressV1Beta1Props.property.tls"></a>
+
+```python
+tls: typing.List[IngressV1Beta1Tls]
+```
 
 - *Type:* typing.List[[`cdk8s_plus_17.IngressV1Beta1Tls`](#cdk8s_plus_17.IngressV1Beta1Tls)]
 
@@ -3607,6 +3967,10 @@ cdk8s_plus_17.IngressV1Beta1Rule(
 
 ##### `backend`<sup>Required</sup> <a name="cdk8s_plus_17.IngressV1Beta1Rule.property.backend"></a>
 
+```python
+backend: IngressV1Beta1Backend
+```
+
 - *Type:* [`cdk8s_plus_17.IngressV1Beta1Backend`](#cdk8s_plus_17.IngressV1Beta1Backend)
 
 Backend defines the referenced service endpoint to which the traffic will be forwarded to.
@@ -3614,6 +3978,10 @@ Backend defines the referenced service endpoint to which the traffic will be for
 ---
 
 ##### `host`<sup>Optional</sup> <a name="cdk8s_plus_17.IngressV1Beta1Rule.property.host"></a>
+
+```python
+host: str
+```
 
 - *Type:* `str`
 - *Default:* If the host is unspecified, the Ingress routes all traffic based
@@ -3632,6 +4000,10 @@ host before the IngressRuleValue.
 ---
 
 ##### `path`<sup>Optional</sup> <a name="cdk8s_plus_17.IngressV1Beta1Rule.property.path"></a>
+
+```python
+path: str
+```
 
 - *Type:* `str`
 - *Default:* If unspecified, the path defaults to a catch all sending traffic
@@ -3658,6 +4030,10 @@ cdk8s_plus_17.IngressV1Beta1Tls(
 
 ##### `hosts`<sup>Optional</sup> <a name="cdk8s_plus_17.IngressV1Beta1Tls.property.hosts"></a>
 
+```python
+hosts: typing.List[str]
+```
+
 - *Type:* typing.List[`str`]
 - *Default:* If unspecified, it defaults to the wildcard host setting for
 the loadbalancer controller fulfilling this Ingress.
@@ -3670,6 +4046,10 @@ this list must match the name/s used in the TLS Secret.
 ---
 
 ##### `secret`<sup>Optional</sup> <a name="cdk8s_plus_17.IngressV1Beta1Tls.property.secret"></a>
+
+```python
+secret: ISecret
+```
 
 - *Type:* [`cdk8s_plus_17.ISecret`](#cdk8s_plus_17.ISecret)
 - *Default:* If unspecified, it allows SSL routing based on SNI hostname.
@@ -3706,6 +4086,10 @@ cdk8s_plus_17.JobProps(
 
 ##### `metadata`<sup>Optional</sup> <a name="cdk8s_plus_17.JobProps.property.metadata"></a>
 
+```python
+metadata: ApiObjectMetadata
+```
+
 - *Type:* [`cdk8s.ApiObjectMetadata`](#cdk8s.ApiObjectMetadata)
 
 Metadata that all persisted resources must have, which includes all objects users must create.
@@ -3713,6 +4097,10 @@ Metadata that all persisted resources must have, which includes all objects user
 ---
 
 ##### `containers`<sup>Optional</sup> <a name="cdk8s_plus_17.JobProps.property.containers"></a>
+
+```python
+containers: typing.List[ContainerProps]
+```
 
 - *Type:* typing.List[[`cdk8s_plus_17.ContainerProps`](#cdk8s_plus_17.ContainerProps)]
 - *Default:* No containers. Note that a pod spec must include at least one container.
@@ -3728,6 +4116,10 @@ You can add additionnal containers using `podSpec.addContainer()`
 
 ##### `restart_policy`<sup>Optional</sup> <a name="cdk8s_plus_17.JobProps.property.restart_policy"></a>
 
+```python
+restart_policy: RestartPolicy
+```
+
 - *Type:* [`cdk8s_plus_17.RestartPolicy`](#cdk8s_plus_17.RestartPolicy)
 - *Default:* RestartPolicy.ALWAYS
 
@@ -3738,6 +4130,10 @@ Restart policy for all containers within the pod.
 ---
 
 ##### `service_account`<sup>Optional</sup> <a name="cdk8s_plus_17.JobProps.property.service_account"></a>
+
+```python
+service_account: IServiceAccount
+```
 
 - *Type:* [`cdk8s_plus_17.IServiceAccount`](#cdk8s_plus_17.IServiceAccount)
 - *Default:* No service account.
@@ -3757,6 +4153,10 @@ Account (for example, default).
 
 ##### `volumes`<sup>Optional</sup> <a name="cdk8s_plus_17.JobProps.property.volumes"></a>
 
+```python
+volumes: typing.List[Volume]
+```
+
 - *Type:* typing.List[[`cdk8s_plus_17.Volume`](#cdk8s_plus_17.Volume)]
 - *Default:* No volumes.
 
@@ -3770,6 +4170,10 @@ You can also add volumes later using `podSpec.addVolume()`
 
 ##### `pod_metadata`<sup>Optional</sup> <a name="cdk8s_plus_17.JobProps.property.pod_metadata"></a>
 
+```python
+pod_metadata: ApiObjectMetadata
+```
+
 - *Type:* [`cdk8s.ApiObjectMetadata`](#cdk8s.ApiObjectMetadata)
 
 The pod metadata.
@@ -3777,6 +4181,10 @@ The pod metadata.
 ---
 
 ##### `active_deadline`<sup>Optional</sup> <a name="cdk8s_plus_17.JobProps.property.active_deadline"></a>
+
+```python
+active_deadline: Duration
+```
 
 - *Type:* [`cdk8s.Duration`](#cdk8s.Duration)
 - *Default:* If unset, then there is no deadline.
@@ -3787,6 +4195,10 @@ Specifies the duration the job may be active before the system tries to terminat
 
 ##### `backoff_limit`<sup>Optional</sup> <a name="cdk8s_plus_17.JobProps.property.backoff_limit"></a>
 
+```python
+backoff_limit: typing.Union[int, float]
+```
+
 - *Type:* `typing.Union[int, float]`
 - *Default:* If not set, system defaults to 6.
 
@@ -3795,6 +4207,10 @@ Specifies the number of retries before marking this job failed.
 ---
 
 ##### `ttl_after_finished`<sup>Optional</sup> <a name="cdk8s_plus_17.JobProps.property.ttl_after_finished"></a>
+
+```python
+ttl_after_finished: Duration
+```
 
 - *Type:* [`cdk8s.Duration`](#cdk8s.Duration)
 - *Default:* If this field is unset, the Job won't be automatically deleted.
@@ -3829,6 +4245,10 @@ cdk8s_plus_17.MountOptions(
 
 ##### `propagation`<sup>Optional</sup> <a name="cdk8s_plus_17.MountOptions.property.propagation"></a>
 
+```python
+propagation: MountPropagation
+```
+
 - *Type:* [`cdk8s_plus_17.MountPropagation`](#cdk8s_plus_17.MountPropagation)
 - *Default:* MountPropagation.NONE
 
@@ -3845,6 +4265,10 @@ This field is beta in 1.10.
 
 ##### `read_only`<sup>Optional</sup> <a name="cdk8s_plus_17.MountOptions.property.read_only"></a>
 
+```python
+read_only: bool
+```
+
 - *Type:* `bool`
 - *Default:* false
 
@@ -3856,6 +4280,10 @@ Defaults to false.
 
 ##### `sub_path`<sup>Optional</sup> <a name="cdk8s_plus_17.MountOptions.property.sub_path"></a>
 
+```python
+sub_path: str
+```
+
 - *Type:* `str`
 - *Default:* "" the volume's root
 
@@ -3864,6 +4292,10 @@ Path within the volume from which the container's volume should be mounted.).
 ---
 
 ##### `sub_path_expr`<sup>Optional</sup> <a name="cdk8s_plus_17.MountOptions.property.sub_path_expr"></a>
+
+```python
+sub_path_expr: str
+```
 
 - *Type:* `str`
 - *Default:* "" volume's root.
@@ -3897,6 +4329,10 @@ cdk8s_plus_17.PathMapping(
 
 ##### `path`<sup>Required</sup> <a name="cdk8s_plus_17.PathMapping.property.path"></a>
 
+```python
+path: str
+```
+
 - *Type:* `str`
 
 The relative path of the file to map the key to.
@@ -3908,6 +4344,10 @@ path. May not contain the path element '..'. May not start with the string
 ---
 
 ##### `mode`<sup>Optional</sup> <a name="cdk8s_plus_17.PathMapping.property.mode"></a>
+
+```python
+mode: typing.Union[int, float]
+```
 
 - *Type:* `typing.Union[int, float]`
 
@@ -3939,6 +4379,10 @@ cdk8s_plus_17.PodProps(
 
 ##### `metadata`<sup>Optional</sup> <a name="cdk8s_plus_17.PodProps.property.metadata"></a>
 
+```python
+metadata: ApiObjectMetadata
+```
+
 - *Type:* [`cdk8s.ApiObjectMetadata`](#cdk8s.ApiObjectMetadata)
 
 Metadata that all persisted resources must have, which includes all objects users must create.
@@ -3946,6 +4390,10 @@ Metadata that all persisted resources must have, which includes all objects user
 ---
 
 ##### `containers`<sup>Optional</sup> <a name="cdk8s_plus_17.PodProps.property.containers"></a>
+
+```python
+containers: typing.List[ContainerProps]
+```
 
 - *Type:* typing.List[[`cdk8s_plus_17.ContainerProps`](#cdk8s_plus_17.ContainerProps)]
 - *Default:* No containers. Note that a pod spec must include at least one container.
@@ -3961,6 +4409,10 @@ You can add additionnal containers using `podSpec.addContainer()`
 
 ##### `restart_policy`<sup>Optional</sup> <a name="cdk8s_plus_17.PodProps.property.restart_policy"></a>
 
+```python
+restart_policy: RestartPolicy
+```
+
 - *Type:* [`cdk8s_plus_17.RestartPolicy`](#cdk8s_plus_17.RestartPolicy)
 - *Default:* RestartPolicy.ALWAYS
 
@@ -3971,6 +4423,10 @@ Restart policy for all containers within the pod.
 ---
 
 ##### `service_account`<sup>Optional</sup> <a name="cdk8s_plus_17.PodProps.property.service_account"></a>
+
+```python
+service_account: IServiceAccount
+```
 
 - *Type:* [`cdk8s_plus_17.IServiceAccount`](#cdk8s_plus_17.IServiceAccount)
 - *Default:* No service account.
@@ -3989,6 +4445,10 @@ Account (for example, default).
 ---
 
 ##### `volumes`<sup>Optional</sup> <a name="cdk8s_plus_17.PodProps.property.volumes"></a>
+
+```python
+volumes: typing.List[Volume]
+```
 
 - *Type:* typing.List[[`cdk8s_plus_17.Volume`](#cdk8s_plus_17.Volume)]
 - *Default:* No volumes.
@@ -4020,6 +4480,10 @@ cdk8s_plus_17.PodSpecProps(
 
 ##### `containers`<sup>Optional</sup> <a name="cdk8s_plus_17.PodSpecProps.property.containers"></a>
 
+```python
+containers: typing.List[ContainerProps]
+```
+
 - *Type:* typing.List[[`cdk8s_plus_17.ContainerProps`](#cdk8s_plus_17.ContainerProps)]
 - *Default:* No containers. Note that a pod spec must include at least one container.
 
@@ -4034,6 +4498,10 @@ You can add additionnal containers using `podSpec.addContainer()`
 
 ##### `restart_policy`<sup>Optional</sup> <a name="cdk8s_plus_17.PodSpecProps.property.restart_policy"></a>
 
+```python
+restart_policy: RestartPolicy
+```
+
 - *Type:* [`cdk8s_plus_17.RestartPolicy`](#cdk8s_plus_17.RestartPolicy)
 - *Default:* RestartPolicy.ALWAYS
 
@@ -4044,6 +4512,10 @@ Restart policy for all containers within the pod.
 ---
 
 ##### `service_account`<sup>Optional</sup> <a name="cdk8s_plus_17.PodSpecProps.property.service_account"></a>
+
+```python
+service_account: IServiceAccount
+```
 
 - *Type:* [`cdk8s_plus_17.IServiceAccount`](#cdk8s_plus_17.IServiceAccount)
 - *Default:* No service account.
@@ -4062,6 +4534,10 @@ Account (for example, default).
 ---
 
 ##### `volumes`<sup>Optional</sup> <a name="cdk8s_plus_17.PodSpecProps.property.volumes"></a>
+
+```python
+volumes: typing.List[Volume]
+```
 
 - *Type:* typing.List[[`cdk8s_plus_17.Volume`](#cdk8s_plus_17.Volume)]
 - *Default:* No volumes.
@@ -4096,6 +4572,10 @@ cdk8s_plus_17.PodTemplateProps(
 
 ##### `containers`<sup>Optional</sup> <a name="cdk8s_plus_17.PodTemplateProps.property.containers"></a>
 
+```python
+containers: typing.List[ContainerProps]
+```
+
 - *Type:* typing.List[[`cdk8s_plus_17.ContainerProps`](#cdk8s_plus_17.ContainerProps)]
 - *Default:* No containers. Note that a pod spec must include at least one container.
 
@@ -4110,6 +4590,10 @@ You can add additionnal containers using `podSpec.addContainer()`
 
 ##### `restart_policy`<sup>Optional</sup> <a name="cdk8s_plus_17.PodTemplateProps.property.restart_policy"></a>
 
+```python
+restart_policy: RestartPolicy
+```
+
 - *Type:* [`cdk8s_plus_17.RestartPolicy`](#cdk8s_plus_17.RestartPolicy)
 - *Default:* RestartPolicy.ALWAYS
 
@@ -4120,6 +4604,10 @@ Restart policy for all containers within the pod.
 ---
 
 ##### `service_account`<sup>Optional</sup> <a name="cdk8s_plus_17.PodTemplateProps.property.service_account"></a>
+
+```python
+service_account: IServiceAccount
+```
 
 - *Type:* [`cdk8s_plus_17.IServiceAccount`](#cdk8s_plus_17.IServiceAccount)
 - *Default:* No service account.
@@ -4139,6 +4627,10 @@ Account (for example, default).
 
 ##### `volumes`<sup>Optional</sup> <a name="cdk8s_plus_17.PodTemplateProps.property.volumes"></a>
 
+```python
+volumes: typing.List[Volume]
+```
+
 - *Type:* typing.List[[`cdk8s_plus_17.Volume`](#cdk8s_plus_17.Volume)]
 - *Default:* No volumes.
 
@@ -4151,6 +4643,10 @@ You can also add volumes later using `podSpec.addVolume()`
 ---
 
 ##### `pod_metadata`<sup>Optional</sup> <a name="cdk8s_plus_17.PodTemplateProps.property.pod_metadata"></a>
+
+```python
+pod_metadata: ApiObjectMetadata
+```
 
 - *Type:* [`cdk8s.ApiObjectMetadata`](#cdk8s.ApiObjectMetadata)
 
@@ -4178,6 +4674,10 @@ cdk8s_plus_17.ProbeOptions(
 
 ##### `failure_threshold`<sup>Optional</sup> <a name="cdk8s_plus_17.ProbeOptions.property.failure_threshold"></a>
 
+```python
+failure_threshold: typing.Union[int, float]
+```
+
 - *Type:* `typing.Union[int, float]`
 - *Default:* 3
 
@@ -4188,6 +4688,10 @@ Defaults to 3. Minimum value is 1.
 ---
 
 ##### `initial_delay_seconds`<sup>Optional</sup> <a name="cdk8s_plus_17.ProbeOptions.property.initial_delay_seconds"></a>
+
+```python
+initial_delay_seconds: Duration
+```
 
 - *Type:* [`cdk8s.Duration`](#cdk8s.Duration)
 - *Default:* immediate
@@ -4200,6 +4704,10 @@ Number of seconds after the container has started before liveness probes are ini
 
 ##### `period_seconds`<sup>Optional</sup> <a name="cdk8s_plus_17.ProbeOptions.property.period_seconds"></a>
 
+```python
+period_seconds: Duration
+```
+
 - *Type:* [`cdk8s.Duration`](#cdk8s.Duration)
 - *Default:* Duration.seconds(10) Minimum value is 1.
 
@@ -4211,6 +4719,10 @@ Default to 10 seconds. Minimum value is 1.
 
 ##### `success_threshold`<sup>Optional</sup> <a name="cdk8s_plus_17.ProbeOptions.property.success_threshold"></a>
 
+```python
+success_threshold: typing.Union[int, float]
+```
+
 - *Type:* `typing.Union[int, float]`
 - *Default:* 1 Must be 1 for liveness and startup. Minimum value is 1.
 
@@ -4221,6 +4733,10 @@ Must be 1 for liveness and startup. Minimum value is 1.
 ---
 
 ##### `timeout_seconds`<sup>Optional</sup> <a name="cdk8s_plus_17.ProbeOptions.property.timeout_seconds"></a>
+
+```python
+timeout_seconds: Duration
+```
 
 - *Type:* [`cdk8s.Duration`](#cdk8s.Duration)
 - *Default:* Duration.seconds(1)
@@ -4249,6 +4765,10 @@ cdk8s_plus_17.ResourceProps(
 
 ##### `metadata`<sup>Optional</sup> <a name="cdk8s_plus_17.ResourceProps.property.metadata"></a>
 
+```python
+metadata: ApiObjectMetadata
+```
+
 - *Type:* [`cdk8s.ApiObjectMetadata`](#cdk8s.ApiObjectMetadata)
 
 Metadata that all persisted resources must have, which includes all objects users must create.
@@ -4271,6 +4791,10 @@ cdk8s_plus_17.SecretProps(
 
 ##### `metadata`<sup>Optional</sup> <a name="cdk8s_plus_17.SecretProps.property.metadata"></a>
 
+```python
+metadata: ApiObjectMetadata
+```
+
 - *Type:* [`cdk8s.ApiObjectMetadata`](#cdk8s.ApiObjectMetadata)
 
 Metadata that all persisted resources must have, which includes all objects users must create.
@@ -4278,6 +4802,10 @@ Metadata that all persisted resources must have, which includes all objects user
 ---
 
 ##### `string_data`<sup>Optional</sup> <a name="cdk8s_plus_17.SecretProps.property.string_data"></a>
+
+```python
+string_data: typing.Mapping[str]
+```
 
 - *Type:* typing.Mapping[`str`]
 
@@ -4291,6 +4819,10 @@ output when reading from the API.
 ---
 
 ##### `type`<sup>Optional</sup> <a name="cdk8s_plus_17.SecretProps.property.type"></a>
+
+```python
+type: str
+```
 
 - *Type:* `str`
 - *Default:* undefined - Don't set a type.
@@ -4319,6 +4851,10 @@ cdk8s_plus_17.SecretValue(
 
 ##### `key`<sup>Required</sup> <a name="cdk8s_plus_17.SecretValue.property.key"></a>
 
+```python
+key: str
+```
+
 - *Type:* `str`
 
 The JSON key.
@@ -4326,6 +4862,10 @@ The JSON key.
 ---
 
 ##### `secret`<sup>Required</sup> <a name="cdk8s_plus_17.SecretValue.property.secret"></a>
+
+```python
+secret: ISecret
+```
 
 - *Type:* [`cdk8s_plus_17.ISecret`](#cdk8s_plus_17.ISecret)
 
@@ -4352,6 +4892,10 @@ cdk8s_plus_17.ServiceAccountProps(
 
 ##### `metadata`<sup>Optional</sup> <a name="cdk8s_plus_17.ServiceAccountProps.property.metadata"></a>
 
+```python
+metadata: ApiObjectMetadata
+```
+
 - *Type:* [`cdk8s.ApiObjectMetadata`](#cdk8s.ApiObjectMetadata)
 
 Metadata that all persisted resources must have, which includes all objects users must create.
@@ -4359,6 +4903,10 @@ Metadata that all persisted resources must have, which includes all objects user
 ---
 
 ##### `secrets`<sup>Optional</sup> <a name="cdk8s_plus_17.ServiceAccountProps.property.secrets"></a>
+
+```python
+secrets: typing.List[ISecret]
+```
 
 - *Type:* typing.List[[`cdk8s_plus_17.ISecret`](#cdk8s_plus_17.ISecret)]
 
@@ -4383,6 +4931,10 @@ cdk8s_plus_17.ServiceIngressV1BetaBackendOptions(
 ```
 
 ##### `port`<sup>Optional</sup> <a name="cdk8s_plus_17.ServiceIngressV1BetaBackendOptions.property.port"></a>
+
+```python
+port: typing.Union[int, float]
+```
 
 - *Type:* `typing.Union[int, float]`
 - *Default:* if the service exposes a single port, this port will be used.
@@ -4416,6 +4968,10 @@ cdk8s_plus_17.ServicePort(
 
 ##### `name`<sup>Optional</sup> <a name="cdk8s_plus_17.ServicePort.property.name"></a>
 
+```python
+name: str
+```
+
 - *Type:* `str`
 
 The name of this port within the service.
@@ -4428,6 +4984,10 @@ on this service.
 ---
 
 ##### `node_port`<sup>Optional</sup> <a name="cdk8s_plus_17.ServicePort.property.node_port"></a>
+
+```python
+node_port: typing.Union[int, float]
+```
 
 - *Type:* `typing.Union[int, float]`
 - *Default:* to auto-allocate a port if the ServiceType of this Service
@@ -4446,6 +5006,10 @@ requires one.
 
 ##### `protocol`<sup>Optional</sup> <a name="cdk8s_plus_17.ServicePort.property.protocol"></a>
 
+```python
+protocol: Protocol
+```
+
 - *Type:* [`cdk8s_plus_17.Protocol`](#cdk8s_plus_17.Protocol)
 - *Default:* Protocol.TCP
 
@@ -4457,6 +5021,10 @@ Supports "TCP", "UDP", and "SCTP". Default is TCP.
 
 ##### `target_port`<sup>Optional</sup> <a name="cdk8s_plus_17.ServicePort.property.target_port"></a>
 
+```python
+target_port: typing.Union[int, float]
+```
+
 - *Type:* `typing.Union[int, float]`
 - *Default:* The value of `port` will be used.
 
@@ -4465,6 +5033,10 @@ The port number the service will redirect to.
 ---
 
 ##### `port`<sup>Required</sup> <a name="cdk8s_plus_17.ServicePort.property.port"></a>
+
+```python
+port: typing.Union[int, float]
+```
 
 - *Type:* `typing.Union[int, float]`
 
@@ -4489,6 +5061,10 @@ cdk8s_plus_17.ServicePortOptions(
 
 ##### `name`<sup>Optional</sup> <a name="cdk8s_plus_17.ServicePortOptions.property.name"></a>
 
+```python
+name: str
+```
+
 - *Type:* `str`
 
 The name of this port within the service.
@@ -4501,6 +5077,10 @@ on this service.
 ---
 
 ##### `node_port`<sup>Optional</sup> <a name="cdk8s_plus_17.ServicePortOptions.property.node_port"></a>
+
+```python
+node_port: typing.Union[int, float]
+```
 
 - *Type:* `typing.Union[int, float]`
 - *Default:* to auto-allocate a port if the ServiceType of this Service
@@ -4519,6 +5099,10 @@ requires one.
 
 ##### `protocol`<sup>Optional</sup> <a name="cdk8s_plus_17.ServicePortOptions.property.protocol"></a>
 
+```python
+protocol: Protocol
+```
+
 - *Type:* [`cdk8s_plus_17.Protocol`](#cdk8s_plus_17.Protocol)
 - *Default:* Protocol.TCP
 
@@ -4529,6 +5113,10 @@ Supports "TCP", "UDP", and "SCTP". Default is TCP.
 ---
 
 ##### `target_port`<sup>Optional</sup> <a name="cdk8s_plus_17.ServicePortOptions.property.target_port"></a>
+
+```python
+target_port: typing.Union[int, float]
+```
 
 - *Type:* `typing.Union[int, float]`
 - *Default:* The value of `port` will be used.
@@ -4559,6 +5147,10 @@ cdk8s_plus_17.ServiceProps(
 
 ##### `metadata`<sup>Optional</sup> <a name="cdk8s_plus_17.ServiceProps.property.metadata"></a>
 
+```python
+metadata: ApiObjectMetadata
+```
+
 - *Type:* [`cdk8s.ApiObjectMetadata`](#cdk8s.ApiObjectMetadata)
 
 Metadata that all persisted resources must have, which includes all objects users must create.
@@ -4566,6 +5158,10 @@ Metadata that all persisted resources must have, which includes all objects user
 ---
 
 ##### `cluster_i_p`<sup>Optional</sup> <a name="cdk8s_plus_17.ServiceProps.property.cluster_i_p"></a>
+
+```python
+cluster_i_p: str
+```
 
 - *Type:* `str`
 - *Default:* Automatically assigned.
@@ -4585,6 +5181,10 @@ ClusterIP, NodePort, and LoadBalancer. Ignored if type is ExternalName.
 
 ##### `external_i_ps`<sup>Optional</sup> <a name="cdk8s_plus_17.ServiceProps.property.external_i_ps"></a>
 
+```python
+external_i_ps: typing.List[str]
+```
+
 - *Type:* typing.List[`str`]
 - *Default:* No external IPs.
 
@@ -4599,6 +5199,10 @@ Kubernetes system.
 
 ##### `external_name`<sup>Optional</sup> <a name="cdk8s_plus_17.ServiceProps.property.external_name"></a>
 
+```python
+external_name: str
+```
+
 - *Type:* `str`
 - *Default:* No external name.
 
@@ -4607,6 +5211,10 @@ The externalName to be used when ServiceType.EXTERNAL_NAME is set.
 ---
 
 ##### `load_balancer_source_ranges`<sup>Optional</sup> <a name="cdk8s_plus_17.ServiceProps.property.load_balancer_source_ranges"></a>
+
+```python
+load_balancer_source_ranges: typing.List[str]
+```
 
 - *Type:* typing.List[`str`]
 
@@ -4618,6 +5226,10 @@ More info: https://kubernetes.io/docs/tasks/access-application-cluster/configure
 
 ##### `ports`<sup>Optional</sup> <a name="cdk8s_plus_17.ServiceProps.property.ports"></a>
 
+```python
+ports: typing.List[ServicePort]
+```
+
 - *Type:* typing.List[[`cdk8s_plus_17.ServicePort`](#cdk8s_plus_17.ServicePort)]
 
 The port exposed by this service.
@@ -4627,6 +5239,10 @@ More info: https://kubernetes.io/docs/concepts/services-networking/service/#virt
 ---
 
 ##### `type`<sup>Optional</sup> <a name="cdk8s_plus_17.ServiceProps.property.type"></a>
+
+```python
+type: ServiceType
+```
 
 - *Type:* [`cdk8s_plus_17.ServiceType`](#cdk8s_plus_17.ServiceType)
 - *Default:* ServiceType.ClusterIP
@@ -4662,6 +5278,10 @@ cdk8s_plus_17.StatefulSetProps(
 
 ##### `metadata`<sup>Optional</sup> <a name="cdk8s_plus_17.StatefulSetProps.property.metadata"></a>
 
+```python
+metadata: ApiObjectMetadata
+```
+
 - *Type:* [`cdk8s.ApiObjectMetadata`](#cdk8s.ApiObjectMetadata)
 
 Metadata that all persisted resources must have, which includes all objects users must create.
@@ -4669,6 +5289,10 @@ Metadata that all persisted resources must have, which includes all objects user
 ---
 
 ##### `containers`<sup>Optional</sup> <a name="cdk8s_plus_17.StatefulSetProps.property.containers"></a>
+
+```python
+containers: typing.List[ContainerProps]
+```
 
 - *Type:* typing.List[[`cdk8s_plus_17.ContainerProps`](#cdk8s_plus_17.ContainerProps)]
 - *Default:* No containers. Note that a pod spec must include at least one container.
@@ -4684,6 +5308,10 @@ You can add additionnal containers using `podSpec.addContainer()`
 
 ##### `restart_policy`<sup>Optional</sup> <a name="cdk8s_plus_17.StatefulSetProps.property.restart_policy"></a>
 
+```python
+restart_policy: RestartPolicy
+```
+
 - *Type:* [`cdk8s_plus_17.RestartPolicy`](#cdk8s_plus_17.RestartPolicy)
 - *Default:* RestartPolicy.ALWAYS
 
@@ -4694,6 +5322,10 @@ Restart policy for all containers within the pod.
 ---
 
 ##### `service_account`<sup>Optional</sup> <a name="cdk8s_plus_17.StatefulSetProps.property.service_account"></a>
+
+```python
+service_account: IServiceAccount
+```
 
 - *Type:* [`cdk8s_plus_17.IServiceAccount`](#cdk8s_plus_17.IServiceAccount)
 - *Default:* No service account.
@@ -4713,6 +5345,10 @@ Account (for example, default).
 
 ##### `volumes`<sup>Optional</sup> <a name="cdk8s_plus_17.StatefulSetProps.property.volumes"></a>
 
+```python
+volumes: typing.List[Volume]
+```
+
 - *Type:* typing.List[[`cdk8s_plus_17.Volume`](#cdk8s_plus_17.Volume)]
 - *Default:* No volumes.
 
@@ -4726,6 +5362,10 @@ You can also add volumes later using `podSpec.addVolume()`
 
 ##### `pod_metadata`<sup>Optional</sup> <a name="cdk8s_plus_17.StatefulSetProps.property.pod_metadata"></a>
 
+```python
+pod_metadata: ApiObjectMetadata
+```
+
 - *Type:* [`cdk8s.ApiObjectMetadata`](#cdk8s.ApiObjectMetadata)
 
 The pod metadata.
@@ -4734,6 +5374,10 @@ The pod metadata.
 
 ##### `service`<sup>Required</sup> <a name="cdk8s_plus_17.StatefulSetProps.property.service"></a>
 
+```python
+service: Service
+```
+
 - *Type:* [`cdk8s_plus_17.Service`](#cdk8s_plus_17.Service)
 
 Service to associate with the statefulset.
@@ -4741,6 +5385,10 @@ Service to associate with the statefulset.
 ---
 
 ##### `default_selector`<sup>Optional</sup> <a name="cdk8s_plus_17.StatefulSetProps.property.default_selector"></a>
+
+```python
+default_selector: bool
+```
 
 - *Type:* `bool`
 - *Default:* true
@@ -4754,6 +5402,10 @@ If this is set to `false` you must define your selector through
 
 ##### `pod_management_policy`<sup>Optional</sup> <a name="cdk8s_plus_17.StatefulSetProps.property.pod_management_policy"></a>
 
+```python
+pod_management_policy: PodManagementPolicy
+```
+
 - *Type:* [`cdk8s_plus_17.PodManagementPolicy`](#cdk8s_plus_17.PodManagementPolicy)
 - *Default:* PodManagementPolicy.ORDERED_READY
 
@@ -4762,6 +5414,10 @@ Pod management policy to use for this statefulset.
 ---
 
 ##### `replicas`<sup>Optional</sup> <a name="cdk8s_plus_17.StatefulSetProps.property.replicas"></a>
+
+```python
+replicas: typing.Union[int, float]
+```
 
 - *Type:* `typing.Union[int, float]`
 - *Default:* 1
@@ -4791,6 +5447,10 @@ cdk8s_plus_17.VolumeMount(
 
 ##### `propagation`<sup>Optional</sup> <a name="cdk8s_plus_17.VolumeMount.property.propagation"></a>
 
+```python
+propagation: MountPropagation
+```
+
 - *Type:* [`cdk8s_plus_17.MountPropagation`](#cdk8s_plus_17.MountPropagation)
 - *Default:* MountPropagation.NONE
 
@@ -4807,6 +5467,10 @@ This field is beta in 1.10.
 
 ##### `read_only`<sup>Optional</sup> <a name="cdk8s_plus_17.VolumeMount.property.read_only"></a>
 
+```python
+read_only: bool
+```
+
 - *Type:* `bool`
 - *Default:* false
 
@@ -4818,6 +5482,10 @@ Defaults to false.
 
 ##### `sub_path`<sup>Optional</sup> <a name="cdk8s_plus_17.VolumeMount.property.sub_path"></a>
 
+```python
+sub_path: str
+```
+
 - *Type:* `str`
 - *Default:* "" the volume's root
 
@@ -4826,6 +5494,10 @@ Path within the volume from which the container's volume should be mounted.).
 ---
 
 ##### `sub_path_expr`<sup>Optional</sup> <a name="cdk8s_plus_17.VolumeMount.property.sub_path_expr"></a>
+
+```python
+sub_path_expr: str
+```
 
 - *Type:* `str`
 - *Default:* "" volume's root.
@@ -4844,6 +5516,10 @@ is beta in 1.15.
 
 ##### `path`<sup>Required</sup> <a name="cdk8s_plus_17.VolumeMount.property.path"></a>
 
+```python
+path: str
+```
+
 - *Type:* `str`
 
 Path within the container at which the volume should be mounted.
@@ -4854,6 +5530,10 @@ contain ':'.
 ---
 
 ##### `volume`<sup>Required</sup> <a name="cdk8s_plus_17.VolumeMount.property.volume"></a>
+
+```python
+volume: Volume
+```
 
 - *Type:* [`cdk8s_plus_17.Volume`](#cdk8s_plus_17.Volume)
 
@@ -5137,6 +5817,10 @@ is beta in 1.15.
 
 ##### `env`<sup>Required</sup> <a name="cdk8s_plus_17.Container.property.env"></a>
 
+```python
+env: typing.Mapping[EnvValue]
+```
+
 - *Type:* typing.Mapping[[`cdk8s_plus_17.EnvValue`](#cdk8s_plus_17.EnvValue)]
 
 The environment variables for this container.
@@ -5147,6 +5831,10 @@ Returns a copy. To add environment variables use `addEnv()`.
 
 ##### `image`<sup>Required</sup> <a name="cdk8s_plus_17.Container.property.image"></a>
 
+```python
+image: str
+```
+
 - *Type:* `str`
 
 The container image.
@@ -5154,6 +5842,10 @@ The container image.
 ---
 
 ##### `image_pull_policy`<sup>Required</sup> <a name="cdk8s_plus_17.Container.property.image_pull_policy"></a>
+
+```python
+image_pull_policy: ImagePullPolicy
+```
 
 - *Type:* [`cdk8s_plus_17.ImagePullPolicy`](#cdk8s_plus_17.ImagePullPolicy)
 
@@ -5163,6 +5855,10 @@ Image pull policy for this container.
 
 ##### `mounts`<sup>Required</sup> <a name="cdk8s_plus_17.Container.property.mounts"></a>
 
+```python
+mounts: typing.List[VolumeMount]
+```
+
 - *Type:* typing.List[[`cdk8s_plus_17.VolumeMount`](#cdk8s_plus_17.VolumeMount)]
 
 Volume mounts configured for this container.
@@ -5170,6 +5866,10 @@ Volume mounts configured for this container.
 ---
 
 ##### `name`<sup>Required</sup> <a name="cdk8s_plus_17.Container.property.name"></a>
+
+```python
+name: str
+```
 
 - *Type:* `str`
 
@@ -5179,6 +5879,10 @@ The name of the container.
 
 ##### `args`<sup>Optional</sup> <a name="cdk8s_plus_17.Container.property.args"></a>
 
+```python
+args: typing.List[str]
+```
+
 - *Type:* typing.List[`str`]
 
 Arguments to the entrypoint.
@@ -5186,6 +5890,10 @@ Arguments to the entrypoint.
 ---
 
 ##### `command`<sup>Optional</sup> <a name="cdk8s_plus_17.Container.property.command"></a>
+
+```python
+command: typing.List[str]
+```
 
 - *Type:* typing.List[`str`]
 
@@ -5195,6 +5903,10 @@ Entrypoint array (the command to execute when the container starts).
 
 ##### `port`<sup>Optional</sup> <a name="cdk8s_plus_17.Container.property.port"></a>
 
+```python
+port: typing.Union[int, float]
+```
+
 - *Type:* `typing.Union[int, float]`
 
 The port this container exposes.
@@ -5202,6 +5914,10 @@ The port this container exposes.
 ---
 
 ##### `working_dir`<sup>Optional</sup> <a name="cdk8s_plus_17.Container.property.working_dir"></a>
+
+```python
+working_dir: str
+```
 
 - *Type:* `str`
 
@@ -5343,11 +6059,19 @@ The value.
 
 ##### `value`<sup>Optional</sup> <a name="cdk8s_plus_17.EnvValue.property.value"></a>
 
+```python
+value: typing.Any
+```
+
 - *Type:* `typing.Any`
 
 ---
 
 ##### `value_from`<sup>Optional</sup> <a name="cdk8s_plus_17.EnvValue.property.value_from"></a>
+
+```python
+value_from: typing.Any
+```
 
 - *Type:* `typing.Any`
 
@@ -5646,6 +6370,10 @@ def add_volume(
 
 ##### `containers`<sup>Required</sup> <a name="cdk8s_plus_17.PodSpec.property.containers"></a>
 
+```python
+containers: typing.List[Container]
+```
+
 - *Type:* typing.List[[`cdk8s_plus_17.Container`](#cdk8s_plus_17.Container)]
 
 The containers belonging to the pod.
@@ -5655,6 +6383,10 @@ Use `addContainer` to add containers.
 ---
 
 ##### `volumes`<sup>Required</sup> <a name="cdk8s_plus_17.PodSpec.property.volumes"></a>
+
+```python
+volumes: typing.List[Volume]
+```
 
 - *Type:* typing.List[[`cdk8s_plus_17.Volume`](#cdk8s_plus_17.Volume)]
 
@@ -5666,6 +6398,10 @@ Use `addVolume` to add volumes.
 
 ##### `restart_policy`<sup>Optional</sup> <a name="cdk8s_plus_17.PodSpec.property.restart_policy"></a>
 
+```python
+restart_policy: RestartPolicy
+```
+
 - *Type:* [`cdk8s_plus_17.RestartPolicy`](#cdk8s_plus_17.RestartPolicy)
 
 Restart policy for all containers within the pod.
@@ -5673,6 +6409,10 @@ Restart policy for all containers within the pod.
 ---
 
 ##### `service_account`<sup>Optional</sup> <a name="cdk8s_plus_17.PodSpec.property.service_account"></a>
+
+```python
+service_account: IServiceAccount
+```
 
 - *Type:* [`cdk8s_plus_17.IServiceAccount`](#cdk8s_plus_17.IServiceAccount)
 
@@ -5770,6 +6510,10 @@ The pod metadata.
 #### Properties <a name="Properties"></a>
 
 ##### `pod_metadata`<sup>Required</sup> <a name="cdk8s_plus_17.PodTemplate.property.pod_metadata"></a>
+
+```python
+pod_metadata: ApiObjectMetadataDefinition
+```
 
 - *Type:* [`cdk8s.ApiObjectMetadataDefinition`](#cdk8s.ApiObjectMetadataDefinition)
 
@@ -6146,6 +6890,10 @@ here and the sum of memory limits of all containers in a pod.
 
 ##### `name`<sup>Required</sup> <a name="cdk8s_plus_17.Volume.property.name"></a>
 
+```python
+name: str
+```
+
 - *Type:* `str`
 
 ---
@@ -6165,6 +6913,10 @@ Represents a config map.
 #### Properties <a name="Properties"></a>
 
 ##### `name`<sup>Required</sup> <a name="cdk8s_plus_17.IConfigMap.property.name"></a>
+
+```python
+name: str
+```
 
 - *Type:* `str`
 
@@ -6356,6 +7108,10 @@ The volume.
 
 ##### `containers`<sup>Required</sup> <a name="cdk8s_plus_17.IPodSpec.property.containers"></a>
 
+```python
+containers: typing.List[Container]
+```
+
 - *Type:* typing.List[[`cdk8s_plus_17.Container`](#cdk8s_plus_17.Container)]
 
 The containers belonging to the pod.
@@ -6365,6 +7121,10 @@ Use `addContainer` to add containers.
 ---
 
 ##### `volumes`<sup>Required</sup> <a name="cdk8s_plus_17.IPodSpec.property.volumes"></a>
+
+```python
+volumes: typing.List[Volume]
+```
 
 - *Type:* typing.List[[`cdk8s_plus_17.Volume`](#cdk8s_plus_17.Volume)]
 
@@ -6376,6 +7136,10 @@ Use `addVolume` to add volumes.
 
 ##### `restart_policy`<sup>Optional</sup> <a name="cdk8s_plus_17.IPodSpec.property.restart_policy"></a>
 
+```python
+restart_policy: RestartPolicy
+```
+
 - *Type:* [`cdk8s_plus_17.RestartPolicy`](#cdk8s_plus_17.RestartPolicy)
 
 Restart policy for all containers within the pod.
@@ -6383,6 +7147,10 @@ Restart policy for all containers within the pod.
 ---
 
 ##### `service_account`<sup>Optional</sup> <a name="cdk8s_plus_17.IPodSpec.property.service_account"></a>
+
+```python
+service_account: IServiceAccount
+```
 
 - *Type:* [`cdk8s_plus_17.IServiceAccount`](#cdk8s_plus_17.IServiceAccount)
 
@@ -6405,6 +7173,10 @@ Use the `PodTemplate` class as an implementation helper.
 
 ##### `containers`<sup>Required</sup> <a name="cdk8s_plus_17.IPodTemplate.property.containers"></a>
 
+```python
+containers: typing.List[Container]
+```
+
 - *Type:* typing.List[[`cdk8s_plus_17.Container`](#cdk8s_plus_17.Container)]
 
 The containers belonging to the pod.
@@ -6414,6 +7186,10 @@ Use `addContainer` to add containers.
 ---
 
 ##### `volumes`<sup>Required</sup> <a name="cdk8s_plus_17.IPodTemplate.property.volumes"></a>
+
+```python
+volumes: typing.List[Volume]
+```
 
 - *Type:* typing.List[[`cdk8s_plus_17.Volume`](#cdk8s_plus_17.Volume)]
 
@@ -6425,6 +7201,10 @@ Use `addVolume` to add volumes.
 
 ##### `restart_policy`<sup>Optional</sup> <a name="cdk8s_plus_17.IPodTemplate.property.restart_policy"></a>
 
+```python
+restart_policy: RestartPolicy
+```
+
 - *Type:* [`cdk8s_plus_17.RestartPolicy`](#cdk8s_plus_17.RestartPolicy)
 
 Restart policy for all containers within the pod.
@@ -6433,6 +7213,10 @@ Restart policy for all containers within the pod.
 
 ##### `service_account`<sup>Optional</sup> <a name="cdk8s_plus_17.IPodTemplate.property.service_account"></a>
 
+```python
+service_account: IServiceAccount
+```
+
 - *Type:* [`cdk8s_plus_17.IServiceAccount`](#cdk8s_plus_17.IServiceAccount)
 
 The service account used to run this pod.
@@ -6440,6 +7224,10 @@ The service account used to run this pod.
 ---
 
 ##### `pod_metadata`<sup>Required</sup> <a name="cdk8s_plus_17.IPodTemplate.property.pod_metadata"></a>
+
+```python
+pod_metadata: ApiObjectMetadataDefinition
+```
 
 - *Type:* [`cdk8s.ApiObjectMetadataDefinition`](#cdk8s.ApiObjectMetadataDefinition)
 
@@ -6458,6 +7246,10 @@ Represents a resource.
 
 ##### `name`<sup>Required</sup> <a name="cdk8s_plus_17.IResource.property.name"></a>
 
+```python
+name: str
+```
+
 - *Type:* `str`
 
 The Kubernetes name of this resource.
@@ -6475,6 +7267,10 @@ The Kubernetes name of this resource.
 
 ##### `name`<sup>Required</sup> <a name="cdk8s_plus_17.ISecret.property.name"></a>
 
+```python
+name: str
+```
+
 - *Type:* `str`
 
 The Kubernetes name of this resource.
@@ -6491,6 +7287,10 @@ The Kubernetes name of this resource.
 #### Properties <a name="Properties"></a>
 
 ##### `name`<sup>Required</sup> <a name="cdk8s_plus_17.IServiceAccount.property.name"></a>
+
+```python
+name: str
+```
 
 - *Type:* `str`
 
