@@ -185,6 +185,10 @@ The name of the config map to import.
 
 ##### `binaryData`<sup>Required</sup> <a name="org.cdk8s.plus17.ConfigMap.property.binaryData"></a>
 
+```java
+public java.util.Map<java.lang.String, java.lang.String> getBinaryData();
+```
+
 - *Type:* java.util.Map<java.lang.String, `java.lang.String`>
 
 The binary data associated with this config map.
@@ -194,6 +198,10 @@ Returns a copy. To add data records, use `addBinaryData()` or `addData()`.
 ---
 
 ##### `data`<sup>Required</sup> <a name="org.cdk8s.plus17.ConfigMap.property.data"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getData();
+```
 
 - *Type:* java.util.Map<java.lang.String, `java.lang.String`>
 
@@ -431,6 +439,10 @@ The label value.
 
 ##### `containers`<sup>Required</sup> <a name="org.cdk8s.plus17.Deployment.property.containers"></a>
 
+```java
+public java.util.List<Container> getContainers();
+```
+
 - *Type:* java.util.List<[`org.cdk8s.plus17.Container`](#org.cdk8s.plus17.Container)>
 
 The containers belonging to the pod.
@@ -440,6 +452,10 @@ Use `addContainer` to add containers.
 ---
 
 ##### `labelSelector`<sup>Required</sup> <a name="org.cdk8s.plus17.Deployment.property.labelSelector"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getLabelSelector();
+```
 
 - *Type:* java.util.Map<java.lang.String, `java.lang.String`>
 
@@ -451,6 +467,10 @@ Returns a a copy. Use `selectByLabel()` to add labels.
 
 ##### `podMetadata`<sup>Required</sup> <a name="org.cdk8s.plus17.Deployment.property.podMetadata"></a>
 
+```java
+public ApiObjectMetadataDefinition getPodMetadata();
+```
+
 - *Type:* [`org.cdk8s.ApiObjectMetadataDefinition`](#org.cdk8s.ApiObjectMetadataDefinition)
 
 Provides read/write access to the underlying pod metadata of the resource.
@@ -459,6 +479,10 @@ Provides read/write access to the underlying pod metadata of the resource.
 
 ##### `replicas`<sup>Required</sup> <a name="org.cdk8s.plus17.Deployment.property.replicas"></a>
 
+```java
+public java.lang.Number getReplicas();
+```
+
 - *Type:* `java.lang.Number`
 
 Number of desired pods.
@@ -466,6 +490,10 @@ Number of desired pods.
 ---
 
 ##### `volumes`<sup>Required</sup> <a name="org.cdk8s.plus17.Deployment.property.volumes"></a>
+
+```java
+public java.util.List<Volume> getVolumes();
+```
 
 - *Type:* java.util.List<[`org.cdk8s.plus17.Volume`](#org.cdk8s.plus17.Volume)>
 
@@ -477,6 +505,10 @@ Use `addVolume` to add volumes.
 
 ##### `restartPolicy`<sup>Optional</sup> <a name="org.cdk8s.plus17.Deployment.property.restartPolicy"></a>
 
+```java
+public RestartPolicy getRestartPolicy();
+```
+
 - *Type:* [`org.cdk8s.plus17.RestartPolicy`](#org.cdk8s.plus17.RestartPolicy)
 
 Restart policy for all containers within the pod.
@@ -484,6 +516,10 @@ Restart policy for all containers within the pod.
 ---
 
 ##### `serviceAccount`<sup>Optional</sup> <a name="org.cdk8s.plus17.Deployment.property.serviceAccount"></a>
+
+```java
+public IServiceAccount getServiceAccount();
+```
 
 - *Type:* [`org.cdk8s.plus17.IServiceAccount`](#org.cdk8s.plus17.IServiceAccount)
 
@@ -871,6 +907,10 @@ public addVolume(Volume volume)
 
 ##### `containers`<sup>Required</sup> <a name="org.cdk8s.plus17.Job.property.containers"></a>
 
+```java
+public java.util.List<Container> getContainers();
+```
+
 - *Type:* java.util.List<[`org.cdk8s.plus17.Container`](#org.cdk8s.plus17.Container)>
 
 The containers belonging to the pod.
@@ -881,6 +921,10 @@ Use `addContainer` to add containers.
 
 ##### `podMetadata`<sup>Required</sup> <a name="org.cdk8s.plus17.Job.property.podMetadata"></a>
 
+```java
+public ApiObjectMetadataDefinition getPodMetadata();
+```
+
 - *Type:* [`org.cdk8s.ApiObjectMetadataDefinition`](#org.cdk8s.ApiObjectMetadataDefinition)
 
 Provides read/write access to the underlying pod metadata of the resource.
@@ -888,6 +932,10 @@ Provides read/write access to the underlying pod metadata of the resource.
 ---
 
 ##### `volumes`<sup>Required</sup> <a name="org.cdk8s.plus17.Job.property.volumes"></a>
+
+```java
+public java.util.List<Volume> getVolumes();
+```
 
 - *Type:* java.util.List<[`org.cdk8s.plus17.Volume`](#org.cdk8s.plus17.Volume)>
 
@@ -899,6 +947,10 @@ Use `addVolume` to add volumes.
 
 ##### `activeDeadline`<sup>Optional</sup> <a name="org.cdk8s.plus17.Job.property.activeDeadline"></a>
 
+```java
+public Duration getActiveDeadline();
+```
+
 - *Type:* [`org.cdk8s.Duration`](#org.cdk8s.Duration)
 
 Duration before job is terminated.
@@ -909,6 +961,10 @@ If undefined, there is no deadline.
 
 ##### `backoffLimit`<sup>Optional</sup> <a name="org.cdk8s.plus17.Job.property.backoffLimit"></a>
 
+```java
+public java.lang.Number getBackoffLimit();
+```
+
 - *Type:* `java.lang.Number`
 
 Number of retries before marking failed.
@@ -916,6 +972,10 @@ Number of retries before marking failed.
 ---
 
 ##### `restartPolicy`<sup>Optional</sup> <a name="org.cdk8s.plus17.Job.property.restartPolicy"></a>
+
+```java
+public RestartPolicy getRestartPolicy();
+```
 
 - *Type:* [`org.cdk8s.plus17.RestartPolicy`](#org.cdk8s.plus17.RestartPolicy)
 
@@ -925,6 +985,10 @@ Restart policy for all containers within the pod.
 
 ##### `serviceAccount`<sup>Optional</sup> <a name="org.cdk8s.plus17.Job.property.serviceAccount"></a>
 
+```java
+public IServiceAccount getServiceAccount();
+```
+
 - *Type:* [`org.cdk8s.plus17.IServiceAccount`](#org.cdk8s.plus17.IServiceAccount)
 
 The service account used to run this pod.
@@ -932,6 +996,10 @@ The service account used to run this pod.
 ---
 
 ##### `ttlAfterFinished`<sup>Optional</sup> <a name="org.cdk8s.plus17.Job.property.ttlAfterFinished"></a>
+
+```java
+public Duration getTtlAfterFinished();
+```
 
 - *Type:* [`org.cdk8s.Duration`](#org.cdk8s.Duration)
 
@@ -1070,6 +1138,10 @@ public addVolume(Volume volume)
 
 ##### `containers`<sup>Required</sup> <a name="org.cdk8s.plus17.Pod.property.containers"></a>
 
+```java
+public java.util.List<Container> getContainers();
+```
+
 - *Type:* java.util.List<[`org.cdk8s.plus17.Container`](#org.cdk8s.plus17.Container)>
 
 The containers belonging to the pod.
@@ -1079,6 +1151,10 @@ Use `addContainer` to add containers.
 ---
 
 ##### `volumes`<sup>Required</sup> <a name="org.cdk8s.plus17.Pod.property.volumes"></a>
+
+```java
+public java.util.List<Volume> getVolumes();
+```
 
 - *Type:* java.util.List<[`org.cdk8s.plus17.Volume`](#org.cdk8s.plus17.Volume)>
 
@@ -1090,6 +1166,10 @@ Use `addVolume` to add volumes.
 
 ##### `restartPolicy`<sup>Optional</sup> <a name="org.cdk8s.plus17.Pod.property.restartPolicy"></a>
 
+```java
+public RestartPolicy getRestartPolicy();
+```
+
 - *Type:* [`org.cdk8s.plus17.RestartPolicy`](#org.cdk8s.plus17.RestartPolicy)
 
 Restart policy for all containers within the pod.
@@ -1097,6 +1177,10 @@ Restart policy for all containers within the pod.
 ---
 
 ##### `serviceAccount`<sup>Optional</sup> <a name="org.cdk8s.plus17.Pod.property.serviceAccount"></a>
+
+```java
+public IServiceAccount getServiceAccount();
+```
 
 - *Type:* [`org.cdk8s.plus17.IServiceAccount`](#org.cdk8s.plus17.IServiceAccount)
 
@@ -1159,11 +1243,19 @@ A factory for attaching `Node`s to the construct.
 
 ##### `metadata`<sup>Required</sup> <a name="org.cdk8s.plus17.Resource.property.metadata"></a>
 
+```java
+public ApiObjectMetadataDefinition getMetadata();
+```
+
 - *Type:* [`org.cdk8s.ApiObjectMetadataDefinition`](#org.cdk8s.ApiObjectMetadataDefinition)
 
 ---
 
 ##### `name`<sup>Required</sup> <a name="org.cdk8s.plus17.Resource.property.name"></a>
+
+```java
+public java.lang.String getName();
+```
 
 - *Type:* `java.lang.String`
 
@@ -1504,6 +1596,10 @@ The port definition.
 
 ##### `ports`<sup>Required</sup> <a name="org.cdk8s.plus17.Service.property.ports"></a>
 
+```java
+public java.util.List<ServicePort> getPorts();
+```
+
 - *Type:* java.util.List<[`org.cdk8s.plus17.ServicePort`](#org.cdk8s.plus17.ServicePort)>
 
 Ports for this service.
@@ -1514,6 +1610,10 @@ Use `serve()` to expose additional service ports.
 
 ##### `selector`<sup>Required</sup> <a name="org.cdk8s.plus17.Service.property.selector"></a>
 
+```java
+public java.util.Map<java.lang.String, java.lang.String> getSelector();
+```
+
 - *Type:* java.util.Map<java.lang.String, `java.lang.String`>
 
 Returns the labels which are used to select pods for this service.
@@ -1521,6 +1621,10 @@ Returns the labels which are used to select pods for this service.
 ---
 
 ##### `type`<sup>Required</sup> <a name="org.cdk8s.plus17.Service.property.type"></a>
+
+```java
+public ServiceType getType();
+```
 
 - *Type:* [`org.cdk8s.plus17.ServiceType`](#org.cdk8s.plus17.ServiceType)
 
@@ -1530,6 +1634,10 @@ Determines how the Service is exposed.
 
 ##### `clusterIP`<sup>Optional</sup> <a name="org.cdk8s.plus17.Service.property.clusterIP"></a>
 
+```java
+public java.lang.String getClusterIP();
+```
+
 - *Type:* `java.lang.String`
 
 The IP address of the service and is usually assigned randomly by the master.
@@ -1537,6 +1645,10 @@ The IP address of the service and is usually assigned randomly by the master.
 ---
 
 ##### `externalName`<sup>Optional</sup> <a name="org.cdk8s.plus17.Service.property.externalName"></a>
+
+```java
+public java.lang.String getExternalName();
+```
 
 - *Type:* `java.lang.String`
 
@@ -1638,6 +1750,10 @@ The name of the service account resource.
 #### Properties <a name="Properties"></a>
 
 ##### `secrets`<sup>Required</sup> <a name="org.cdk8s.plus17.ServiceAccount.property.secrets"></a>
+
+```java
+public java.util.List<ISecret> getSecrets();
+```
 
 - *Type:* java.util.List<[`org.cdk8s.plus17.ISecret`](#org.cdk8s.plus17.ISecret)>
 
@@ -1871,6 +1987,10 @@ The label value.
 
 ##### `containers`<sup>Required</sup> <a name="org.cdk8s.plus17.StatefulSet.property.containers"></a>
 
+```java
+public java.util.List<Container> getContainers();
+```
+
 - *Type:* java.util.List<[`org.cdk8s.plus17.Container`](#org.cdk8s.plus17.Container)>
 
 The containers belonging to the pod.
@@ -1880,6 +2000,10 @@ Use `addContainer` to add containers.
 ---
 
 ##### `labelSelector`<sup>Required</sup> <a name="org.cdk8s.plus17.StatefulSet.property.labelSelector"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getLabelSelector();
+```
 
 - *Type:* java.util.Map<java.lang.String, `java.lang.String`>
 
@@ -1891,6 +2015,10 @@ Returns a a copy. Use `selectByLabel()` to add labels.
 
 ##### `podManagementPolicy`<sup>Required</sup> <a name="org.cdk8s.plus17.StatefulSet.property.podManagementPolicy"></a>
 
+```java
+public PodManagementPolicy getPodManagementPolicy();
+```
+
 - *Type:* [`org.cdk8s.plus17.PodManagementPolicy`](#org.cdk8s.plus17.PodManagementPolicy)
 
 Management policy to use for the set.
@@ -1898,6 +2026,10 @@ Management policy to use for the set.
 ---
 
 ##### `podMetadata`<sup>Required</sup> <a name="org.cdk8s.plus17.StatefulSet.property.podMetadata"></a>
+
+```java
+public ApiObjectMetadataDefinition getPodMetadata();
+```
 
 - *Type:* [`org.cdk8s.ApiObjectMetadataDefinition`](#org.cdk8s.ApiObjectMetadataDefinition)
 
@@ -1907,6 +2039,10 @@ Provides read/write access to the underlying pod metadata of the resource.
 
 ##### `replicas`<sup>Required</sup> <a name="org.cdk8s.plus17.StatefulSet.property.replicas"></a>
 
+```java
+public java.lang.Number getReplicas();
+```
+
 - *Type:* `java.lang.Number`
 
 Number of desired pods.
@@ -1914,6 +2050,10 @@ Number of desired pods.
 ---
 
 ##### `volumes`<sup>Required</sup> <a name="org.cdk8s.plus17.StatefulSet.property.volumes"></a>
+
+```java
+public java.util.List<Volume> getVolumes();
+```
 
 - *Type:* java.util.List<[`org.cdk8s.plus17.Volume`](#org.cdk8s.plus17.Volume)>
 
@@ -1925,6 +2065,10 @@ Use `addVolume` to add volumes.
 
 ##### `restartPolicy`<sup>Optional</sup> <a name="org.cdk8s.plus17.StatefulSet.property.restartPolicy"></a>
 
+```java
+public RestartPolicy getRestartPolicy();
+```
+
 - *Type:* [`org.cdk8s.plus17.RestartPolicy`](#org.cdk8s.plus17.RestartPolicy)
 
 Restart policy for all containers within the pod.
@@ -1932,6 +2076,10 @@ Restart policy for all containers within the pod.
 ---
 
 ##### `serviceAccount`<sup>Optional</sup> <a name="org.cdk8s.plus17.StatefulSet.property.serviceAccount"></a>
+
+```java
+public IServiceAccount getServiceAccount();
+```
 
 - *Type:* [`org.cdk8s.plus17.IServiceAccount`](#org.cdk8s.plus17.IServiceAccount)
 
@@ -1959,6 +2107,10 @@ AddDirectoryOptions.builder()
 
 ##### `exclude`<sup>Optional</sup> <a name="org.cdk8s.plus17.AddDirectoryOptions.property.exclude"></a>
 
+```java
+public java.util.List<java.lang.String> getExclude();
+```
+
 - *Type:* java.util.List<`java.lang.String`>
 - *Default:* include all files
 
@@ -1967,6 +2119,10 @@ Glob patterns to exclude when adding files.
 ---
 
 ##### `keyPrefix`<sup>Optional</sup> <a name="org.cdk8s.plus17.AddDirectoryOptions.property.keyPrefix"></a>
+
+```java
+public java.lang.String getKeyPrefix();
+```
 
 - *Type:* `java.lang.String`
 - *Default:* ""
@@ -1995,6 +2151,10 @@ CommandProbeOptions.builder()
 
 ##### `failureThreshold`<sup>Optional</sup> <a name="org.cdk8s.plus17.CommandProbeOptions.property.failureThreshold"></a>
 
+```java
+public java.lang.Number getFailureThreshold();
+```
+
 - *Type:* `java.lang.Number`
 - *Default:* 3
 
@@ -2005,6 +2165,10 @@ Defaults to 3. Minimum value is 1.
 ---
 
 ##### `initialDelaySeconds`<sup>Optional</sup> <a name="org.cdk8s.plus17.CommandProbeOptions.property.initialDelaySeconds"></a>
+
+```java
+public Duration getInitialDelaySeconds();
+```
 
 - *Type:* [`org.cdk8s.Duration`](#org.cdk8s.Duration)
 - *Default:* immediate
@@ -2017,6 +2181,10 @@ Number of seconds after the container has started before liveness probes are ini
 
 ##### `periodSeconds`<sup>Optional</sup> <a name="org.cdk8s.plus17.CommandProbeOptions.property.periodSeconds"></a>
 
+```java
+public Duration getPeriodSeconds();
+```
+
 - *Type:* [`org.cdk8s.Duration`](#org.cdk8s.Duration)
 - *Default:* Duration.seconds(10) Minimum value is 1.
 
@@ -2028,6 +2196,10 @@ Default to 10 seconds. Minimum value is 1.
 
 ##### `successThreshold`<sup>Optional</sup> <a name="org.cdk8s.plus17.CommandProbeOptions.property.successThreshold"></a>
 
+```java
+public java.lang.Number getSuccessThreshold();
+```
+
 - *Type:* `java.lang.Number`
 - *Default:* 1 Must be 1 for liveness and startup. Minimum value is 1.
 
@@ -2038,6 +2210,10 @@ Must be 1 for liveness and startup. Minimum value is 1.
 ---
 
 ##### `timeoutSeconds`<sup>Optional</sup> <a name="org.cdk8s.plus17.CommandProbeOptions.property.timeoutSeconds"></a>
+
+```java
+public Duration getTimeoutSeconds();
+```
 
 - *Type:* [`org.cdk8s.Duration`](#org.cdk8s.Duration)
 - *Default:* Duration.seconds(1)
@@ -2068,6 +2244,10 @@ ConfigMapProps.builder()
 
 ##### `metadata`<sup>Optional</sup> <a name="org.cdk8s.plus17.ConfigMapProps.property.metadata"></a>
 
+```java
+public ApiObjectMetadata getMetadata();
+```
+
 - *Type:* [`org.cdk8s.ApiObjectMetadata`](#org.cdk8s.ApiObjectMetadata)
 
 Metadata that all persisted resources must have, which includes all objects users must create.
@@ -2075,6 +2255,10 @@ Metadata that all persisted resources must have, which includes all objects user
 ---
 
 ##### `binaryData`<sup>Optional</sup> <a name="org.cdk8s.plus17.ConfigMapProps.property.binaryData"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getBinaryData();
+```
 
 - *Type:* java.util.Map<java.lang.String, `java.lang.String`>
 
@@ -2091,6 +2275,10 @@ You can also add binary data using `configMap.addBinaryData()`.
 ---
 
 ##### `data`<sup>Optional</sup> <a name="org.cdk8s.plus17.ConfigMapProps.property.data"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getData();
+```
 
 - *Type:* java.util.Map<java.lang.String, `java.lang.String`>
 
@@ -2124,6 +2312,10 @@ ConfigMapVolumeOptions.builder()
 
 ##### `defaultMode`<sup>Optional</sup> <a name="org.cdk8s.plus17.ConfigMapVolumeOptions.property.defaultMode"></a>
 
+```java
+public java.lang.Number getDefaultMode();
+```
+
 - *Type:* `java.lang.Number`
 - *Default:* 0644. Directories within the path are not affected by this
 setting. This might be in conflict with other options that affect the file
@@ -2140,6 +2332,10 @@ file mode, like fsGroup, and the result can be other mode bits set.
 
 ##### `items`<sup>Optional</sup> <a name="org.cdk8s.plus17.ConfigMapVolumeOptions.property.items"></a>
 
+```java
+public java.util.Map<java.lang.String, PathMapping> getItems();
+```
+
 - *Type:* java.util.Map<java.lang.String, [`org.cdk8s.plus17.PathMapping`](#org.cdk8s.plus17.PathMapping)>
 - *Default:* no mapping
 
@@ -2155,6 +2351,10 @@ contain the '..' path or start with '..'.
 
 ##### `name`<sup>Optional</sup> <a name="org.cdk8s.plus17.ConfigMapVolumeOptions.property.name"></a>
 
+```java
+public java.lang.String getName();
+```
+
 - *Type:* `java.lang.String`
 - *Default:* auto-generated
 
@@ -2163,6 +2363,10 @@ The volume name.
 ---
 
 ##### `optional`<sup>Optional</sup> <a name="org.cdk8s.plus17.ConfigMapVolumeOptions.property.optional"></a>
+
+```java
+public java.lang.Boolean getOptional();
+```
 
 - *Type:* `java.lang.Boolean`
 - *Default:* undocumented
@@ -2198,6 +2402,10 @@ ContainerProps.builder()
 
 ##### `image`<sup>Required</sup> <a name="org.cdk8s.plus17.ContainerProps.property.image"></a>
 
+```java
+public java.lang.String getImage();
+```
+
 - *Type:* `java.lang.String`
 
 Docker image name.
@@ -2205,6 +2413,10 @@ Docker image name.
 ---
 
 ##### `args`<sup>Optional</sup> <a name="org.cdk8s.plus17.ContainerProps.property.args"></a>
+
+```java
+public java.util.List<java.lang.String> getArgs();
+```
 
 - *Type:* java.util.List<`java.lang.String`>
 - *Default:* []
@@ -2225,6 +2437,10 @@ Cannot be updated.
 
 ##### `command`<sup>Optional</sup> <a name="org.cdk8s.plus17.ContainerProps.property.command"></a>
 
+```java
+public java.util.List<java.lang.String> getCommand();
+```
+
 - *Type:* java.util.List<`java.lang.String`>
 - *Default:* The docker image's ENTRYPOINT.
 
@@ -2239,6 +2455,10 @@ More info: https://kubernetes.io/docs/tasks/inject-data-application/define-comma
 
 ##### `env`<sup>Optional</sup> <a name="org.cdk8s.plus17.ContainerProps.property.env"></a>
 
+```java
+public java.util.Map<java.lang.String, EnvValue> getEnv();
+```
+
 - *Type:* java.util.Map<java.lang.String, [`org.cdk8s.plus17.EnvValue`](#org.cdk8s.plus17.EnvValue)>
 - *Default:* No environment variables.
 
@@ -2250,6 +2470,10 @@ Cannot be updated.
 
 ##### `imagePullPolicy`<sup>Optional</sup> <a name="org.cdk8s.plus17.ContainerProps.property.imagePullPolicy"></a>
 
+```java
+public ImagePullPolicy getImagePullPolicy();
+```
+
 - *Type:* [`org.cdk8s.plus17.ImagePullPolicy`](#org.cdk8s.plus17.ImagePullPolicy)
 - *Default:* ImagePullPolicy.ALWAYS
 
@@ -2258,6 +2482,10 @@ Image pull policy for this container.
 ---
 
 ##### `liveness`<sup>Optional</sup> <a name="org.cdk8s.plus17.ContainerProps.property.liveness"></a>
+
+```java
+public Probe getLiveness();
+```
 
 - *Type:* [`org.cdk8s.plus17.Probe`](#org.cdk8s.plus17.Probe)
 - *Default:* no liveness probe is defined
@@ -2270,6 +2498,10 @@ Container will be restarted if the probe fails.
 
 ##### `name`<sup>Optional</sup> <a name="org.cdk8s.plus17.ContainerProps.property.name"></a>
 
+```java
+public java.lang.String getName();
+```
+
 - *Type:* `java.lang.String`
 - *Default:* 'main'
 
@@ -2280,6 +2512,10 @@ Each container in a pod must have a unique name (DNS_LABEL). Cannot be updated.
 ---
 
 ##### `port`<sup>Optional</sup> <a name="org.cdk8s.plus17.ContainerProps.property.port"></a>
+
+```java
+public java.lang.Number getPort();
+```
 
 - *Type:* `java.lang.Number`
 - *Default:* No port is exposed.
@@ -2292,6 +2528,10 @@ This must be a valid port number, 0 < x < 65536.
 
 ##### `readiness`<sup>Optional</sup> <a name="org.cdk8s.plus17.ContainerProps.property.readiness"></a>
 
+```java
+public Probe getReadiness();
+```
+
 - *Type:* [`org.cdk8s.plus17.Probe`](#org.cdk8s.plus17.Probe)
 - *Default:* no readiness probe is defined
 
@@ -2300,6 +2540,10 @@ Determines when the container is ready to serve traffic.
 ---
 
 ##### `startup`<sup>Optional</sup> <a name="org.cdk8s.plus17.ContainerProps.property.startup"></a>
+
+```java
+public Probe getStartup();
+```
 
 - *Type:* [`org.cdk8s.plus17.Probe`](#org.cdk8s.plus17.Probe)
 - *Default:* no startup probe is defined.
@@ -2312,6 +2556,10 @@ If specified, no other probes are executed until this completes successfully
 
 ##### `volumeMounts`<sup>Optional</sup> <a name="org.cdk8s.plus17.ContainerProps.property.volumeMounts"></a>
 
+```java
+public java.util.List<VolumeMount> getVolumeMounts();
+```
+
 - *Type:* java.util.List<[`org.cdk8s.plus17.VolumeMount`](#org.cdk8s.plus17.VolumeMount)>
 
 Pod volumes to mount into the container's filesystem.
@@ -2321,6 +2569,10 @@ Cannot be updated.
 ---
 
 ##### `workingDir`<sup>Optional</sup> <a name="org.cdk8s.plus17.ContainerProps.property.workingDir"></a>
+
+```java
+public java.lang.String getWorkingDir();
+```
 
 - *Type:* `java.lang.String`
 - *Default:* The container runtime's default.
@@ -2354,6 +2606,10 @@ DeploymentProps.builder()
 
 ##### `metadata`<sup>Optional</sup> <a name="org.cdk8s.plus17.DeploymentProps.property.metadata"></a>
 
+```java
+public ApiObjectMetadata getMetadata();
+```
+
 - *Type:* [`org.cdk8s.ApiObjectMetadata`](#org.cdk8s.ApiObjectMetadata)
 
 Metadata that all persisted resources must have, which includes all objects users must create.
@@ -2361,6 +2617,10 @@ Metadata that all persisted resources must have, which includes all objects user
 ---
 
 ##### `containers`<sup>Optional</sup> <a name="org.cdk8s.plus17.DeploymentProps.property.containers"></a>
+
+```java
+public java.util.List<ContainerProps> getContainers();
+```
 
 - *Type:* java.util.List<[`org.cdk8s.plus17.ContainerProps`](#org.cdk8s.plus17.ContainerProps)>
 - *Default:* No containers. Note that a pod spec must include at least one container.
@@ -2376,6 +2636,10 @@ You can add additionnal containers using `podSpec.addContainer()`
 
 ##### `restartPolicy`<sup>Optional</sup> <a name="org.cdk8s.plus17.DeploymentProps.property.restartPolicy"></a>
 
+```java
+public RestartPolicy getRestartPolicy();
+```
+
 - *Type:* [`org.cdk8s.plus17.RestartPolicy`](#org.cdk8s.plus17.RestartPolicy)
 - *Default:* RestartPolicy.ALWAYS
 
@@ -2386,6 +2650,10 @@ Restart policy for all containers within the pod.
 ---
 
 ##### `serviceAccount`<sup>Optional</sup> <a name="org.cdk8s.plus17.DeploymentProps.property.serviceAccount"></a>
+
+```java
+public IServiceAccount getServiceAccount();
+```
 
 - *Type:* [`org.cdk8s.plus17.IServiceAccount`](#org.cdk8s.plus17.IServiceAccount)
 - *Default:* No service account.
@@ -2405,6 +2673,10 @@ Account (for example, default).
 
 ##### `volumes`<sup>Optional</sup> <a name="org.cdk8s.plus17.DeploymentProps.property.volumes"></a>
 
+```java
+public java.util.List<Volume> getVolumes();
+```
+
 - *Type:* java.util.List<[`org.cdk8s.plus17.Volume`](#org.cdk8s.plus17.Volume)>
 - *Default:* No volumes.
 
@@ -2418,6 +2690,10 @@ You can also add volumes later using `podSpec.addVolume()`
 
 ##### `podMetadata`<sup>Optional</sup> <a name="org.cdk8s.plus17.DeploymentProps.property.podMetadata"></a>
 
+```java
+public ApiObjectMetadata getPodMetadata();
+```
+
 - *Type:* [`org.cdk8s.ApiObjectMetadata`](#org.cdk8s.ApiObjectMetadata)
 
 The pod metadata.
@@ -2425,6 +2701,10 @@ The pod metadata.
 ---
 
 ##### `defaultSelector`<sup>Optional</sup> <a name="org.cdk8s.plus17.DeploymentProps.property.defaultSelector"></a>
+
+```java
+public java.lang.Boolean getDefaultSelector();
+```
 
 - *Type:* `java.lang.Boolean`
 - *Default:* true
@@ -2437,6 +2717,10 @@ If this is set to `false` you must define your selector through
 ---
 
 ##### `replicas`<sup>Optional</sup> <a name="org.cdk8s.plus17.DeploymentProps.property.replicas"></a>
+
+```java
+public java.lang.Number getReplicas();
+```
 
 - *Type:* `java.lang.Number`
 - *Default:* 1
@@ -2462,6 +2746,10 @@ EmptyDirVolumeOptions.builder()
 
 ##### `medium`<sup>Optional</sup> <a name="org.cdk8s.plus17.EmptyDirVolumeOptions.property.medium"></a>
 
+```java
+public EmptyDirMedium getMedium();
+```
+
 - *Type:* [`org.cdk8s.plus17.EmptyDirMedium`](#org.cdk8s.plus17.EmptyDirMedium)
 - *Default:* EmptyDirMedium.DEFAULT
 
@@ -2476,6 +2764,10 @@ against your Container's memory limit.
 ---
 
 ##### `sizeLimit`<sup>Optional</sup> <a name="org.cdk8s.plus17.EmptyDirVolumeOptions.property.sizeLimit"></a>
+
+```java
+public Size getSizeLimit();
+```
 
 - *Type:* [`org.cdk8s.Size`](#org.cdk8s.Size)
 - *Default:* limit is undefined
@@ -2505,6 +2797,10 @@ EnvValueFromConfigMapOptions.builder()
 
 ##### `optional`<sup>Optional</sup> <a name="org.cdk8s.plus17.EnvValueFromConfigMapOptions.property.optional"></a>
 
+```java
+public java.lang.Boolean getOptional();
+```
+
 - *Type:* `java.lang.Boolean`
 - *Default:* false
 
@@ -2527,6 +2823,10 @@ EnvValueFromProcessOptions.builder()
 ```
 
 ##### `required`<sup>Optional</sup> <a name="org.cdk8s.plus17.EnvValueFromProcessOptions.property.required"></a>
+
+```java
+public java.lang.Boolean getRequired();
+```
 
 - *Type:* `java.lang.Boolean`
 - *Default:* false
@@ -2552,6 +2852,10 @@ EnvValueFromSecretOptions.builder()
 ```
 
 ##### `optional`<sup>Optional</sup> <a name="org.cdk8s.plus17.EnvValueFromSecretOptions.property.optional"></a>
+
+```java
+public java.lang.Boolean getOptional();
+```
 
 - *Type:* `java.lang.Boolean`
 - *Default:* false
@@ -2579,6 +2883,10 @@ ExposeOptions.builder()
 
 ##### `name`<sup>Optional</sup> <a name="org.cdk8s.plus17.ExposeOptions.property.name"></a>
 
+```java
+public java.lang.String getName();
+```
+
 - *Type:* `java.lang.String`
 - *Default:* undefined Uses the system generated name.
 
@@ -2589,6 +2897,10 @@ This will be set on the Service.metadata and must be a DNS_LABEL
 ---
 
 ##### `protocol`<sup>Optional</sup> <a name="org.cdk8s.plus17.ExposeOptions.property.protocol"></a>
+
+```java
+public Protocol getProtocol();
+```
 
 - *Type:* [`org.cdk8s.plus17.Protocol`](#org.cdk8s.plus17.Protocol)
 - *Default:* Protocol.TCP
@@ -2601,6 +2913,10 @@ Supports "TCP", "UDP", and "SCTP". Default is TCP.
 
 ##### `serviceType`<sup>Optional</sup> <a name="org.cdk8s.plus17.ExposeOptions.property.serviceType"></a>
 
+```java
+public ServiceType getServiceType();
+```
+
 - *Type:* [`org.cdk8s.plus17.ServiceType`](#org.cdk8s.plus17.ServiceType)
 - *Default:* ClusterIP.
 
@@ -2609,6 +2925,10 @@ The type of the exposed service.
 ---
 
 ##### `targetPort`<sup>Optional</sup> <a name="org.cdk8s.plus17.ExposeOptions.property.targetPort"></a>
+
+```java
+public java.lang.Number getTargetPort();
+```
 
 - *Type:* `java.lang.Number`
 - *Default:* The port of the first container in the deployment (ie. containers[0].port)
@@ -2638,6 +2958,10 @@ HttpGetProbeOptions.builder()
 
 ##### `failureThreshold`<sup>Optional</sup> <a name="org.cdk8s.plus17.HttpGetProbeOptions.property.failureThreshold"></a>
 
+```java
+public java.lang.Number getFailureThreshold();
+```
+
 - *Type:* `java.lang.Number`
 - *Default:* 3
 
@@ -2648,6 +2972,10 @@ Defaults to 3. Minimum value is 1.
 ---
 
 ##### `initialDelaySeconds`<sup>Optional</sup> <a name="org.cdk8s.plus17.HttpGetProbeOptions.property.initialDelaySeconds"></a>
+
+```java
+public Duration getInitialDelaySeconds();
+```
 
 - *Type:* [`org.cdk8s.Duration`](#org.cdk8s.Duration)
 - *Default:* immediate
@@ -2660,6 +2988,10 @@ Number of seconds after the container has started before liveness probes are ini
 
 ##### `periodSeconds`<sup>Optional</sup> <a name="org.cdk8s.plus17.HttpGetProbeOptions.property.periodSeconds"></a>
 
+```java
+public Duration getPeriodSeconds();
+```
+
 - *Type:* [`org.cdk8s.Duration`](#org.cdk8s.Duration)
 - *Default:* Duration.seconds(10) Minimum value is 1.
 
@@ -2671,6 +3003,10 @@ Default to 10 seconds. Minimum value is 1.
 
 ##### `successThreshold`<sup>Optional</sup> <a name="org.cdk8s.plus17.HttpGetProbeOptions.property.successThreshold"></a>
 
+```java
+public java.lang.Number getSuccessThreshold();
+```
+
 - *Type:* `java.lang.Number`
 - *Default:* 1 Must be 1 for liveness and startup. Minimum value is 1.
 
@@ -2681,6 +3017,10 @@ Must be 1 for liveness and startup. Minimum value is 1.
 ---
 
 ##### `timeoutSeconds`<sup>Optional</sup> <a name="org.cdk8s.plus17.HttpGetProbeOptions.property.timeoutSeconds"></a>
+
+```java
+public Duration getTimeoutSeconds();
+```
 
 - *Type:* [`org.cdk8s.Duration`](#org.cdk8s.Duration)
 - *Default:* Duration.seconds(1)
@@ -2694,6 +3034,10 @@ Defaults to 1 second. Minimum value is 1.
 ---
 
 ##### `port`<sup>Optional</sup> <a name="org.cdk8s.plus17.HttpGetProbeOptions.property.port"></a>
+
+```java
+public java.lang.Number getPort();
+```
 
 - *Type:* `java.lang.Number`
 - *Default:* defaults to `container.port`.
@@ -2721,6 +3065,10 @@ IngressV1Beta1Props.builder()
 
 ##### `metadata`<sup>Optional</sup> <a name="org.cdk8s.plus17.IngressV1Beta1Props.property.metadata"></a>
 
+```java
+public ApiObjectMetadata getMetadata();
+```
+
 - *Type:* [`org.cdk8s.ApiObjectMetadata`](#org.cdk8s.ApiObjectMetadata)
 
 Metadata that all persisted resources must have, which includes all objects users must create.
@@ -2728,6 +3076,10 @@ Metadata that all persisted resources must have, which includes all objects user
 ---
 
 ##### `defaultBackend`<sup>Optional</sup> <a name="org.cdk8s.plus17.IngressV1Beta1Props.property.defaultBackend"></a>
+
+```java
+public IngressV1Beta1Backend getDefaultBackend();
+```
 
 - *Type:* [`org.cdk8s.plus17.IngressV1Beta1Backend`](#org.cdk8s.plus17.IngressV1Beta1Backend)
 
@@ -2739,6 +3091,10 @@ adding a rule with both `path` and `host` undefined.
 ---
 
 ##### `rules`<sup>Optional</sup> <a name="org.cdk8s.plus17.IngressV1Beta1Props.property.rules"></a>
+
+```java
+public java.util.List<IngressV1Beta1Rule> getRules();
+```
 
 - *Type:* java.util.List<[`org.cdk8s.plus17.IngressV1Beta1Rule`](#org.cdk8s.plus17.IngressV1Beta1Rule)>
 
@@ -2754,6 +3110,10 @@ You can also add rules later using `addRule()`, `addHostRule()`,
 ---
 
 ##### `tls`<sup>Optional</sup> <a name="org.cdk8s.plus17.IngressV1Beta1Props.property.tls"></a>
+
+```java
+public java.util.List<IngressV1Beta1Tls> getTls();
+```
 
 - *Type:* java.util.List<[`org.cdk8s.plus17.IngressV1Beta1Tls`](#org.cdk8s.plus17.IngressV1Beta1Tls)>
 
@@ -2788,6 +3148,10 @@ IngressV1Beta1Rule.builder()
 
 ##### `backend`<sup>Required</sup> <a name="org.cdk8s.plus17.IngressV1Beta1Rule.property.backend"></a>
 
+```java
+public IngressV1Beta1Backend getBackend();
+```
+
 - *Type:* [`org.cdk8s.plus17.IngressV1Beta1Backend`](#org.cdk8s.plus17.IngressV1Beta1Backend)
 
 Backend defines the referenced service endpoint to which the traffic will be forwarded to.
@@ -2795,6 +3159,10 @@ Backend defines the referenced service endpoint to which the traffic will be for
 ---
 
 ##### `host`<sup>Optional</sup> <a name="org.cdk8s.plus17.IngressV1Beta1Rule.property.host"></a>
+
+```java
+public java.lang.String getHost();
+```
 
 - *Type:* `java.lang.String`
 - *Default:* If the host is unspecified, the Ingress routes all traffic based
@@ -2813,6 +3181,10 @@ host before the IngressRuleValue.
 ---
 
 ##### `path`<sup>Optional</sup> <a name="org.cdk8s.plus17.IngressV1Beta1Rule.property.path"></a>
+
+```java
+public java.lang.String getPath();
+```
 
 - *Type:* `java.lang.String`
 - *Default:* If unspecified, the path defaults to a catch all sending traffic
@@ -2839,6 +3211,10 @@ IngressV1Beta1Tls.builder()
 
 ##### `hosts`<sup>Optional</sup> <a name="org.cdk8s.plus17.IngressV1Beta1Tls.property.hosts"></a>
 
+```java
+public java.util.List<java.lang.String> getHosts();
+```
+
 - *Type:* java.util.List<`java.lang.String`>
 - *Default:* If unspecified, it defaults to the wildcard host setting for
 the loadbalancer controller fulfilling this Ingress.
@@ -2851,6 +3227,10 @@ this list must match the name/s used in the TLS Secret.
 ---
 
 ##### `secret`<sup>Optional</sup> <a name="org.cdk8s.plus17.IngressV1Beta1Tls.property.secret"></a>
+
+```java
+public ISecret getSecret();
+```
 
 - *Type:* [`org.cdk8s.plus17.ISecret`](#org.cdk8s.plus17.ISecret)
 - *Default:* If unspecified, it allows SSL routing based on SNI hostname.
@@ -2887,6 +3267,10 @@ JobProps.builder()
 
 ##### `metadata`<sup>Optional</sup> <a name="org.cdk8s.plus17.JobProps.property.metadata"></a>
 
+```java
+public ApiObjectMetadata getMetadata();
+```
+
 - *Type:* [`org.cdk8s.ApiObjectMetadata`](#org.cdk8s.ApiObjectMetadata)
 
 Metadata that all persisted resources must have, which includes all objects users must create.
@@ -2894,6 +3278,10 @@ Metadata that all persisted resources must have, which includes all objects user
 ---
 
 ##### `containers`<sup>Optional</sup> <a name="org.cdk8s.plus17.JobProps.property.containers"></a>
+
+```java
+public java.util.List<ContainerProps> getContainers();
+```
 
 - *Type:* java.util.List<[`org.cdk8s.plus17.ContainerProps`](#org.cdk8s.plus17.ContainerProps)>
 - *Default:* No containers. Note that a pod spec must include at least one container.
@@ -2909,6 +3297,10 @@ You can add additionnal containers using `podSpec.addContainer()`
 
 ##### `restartPolicy`<sup>Optional</sup> <a name="org.cdk8s.plus17.JobProps.property.restartPolicy"></a>
 
+```java
+public RestartPolicy getRestartPolicy();
+```
+
 - *Type:* [`org.cdk8s.plus17.RestartPolicy`](#org.cdk8s.plus17.RestartPolicy)
 - *Default:* RestartPolicy.ALWAYS
 
@@ -2919,6 +3311,10 @@ Restart policy for all containers within the pod.
 ---
 
 ##### `serviceAccount`<sup>Optional</sup> <a name="org.cdk8s.plus17.JobProps.property.serviceAccount"></a>
+
+```java
+public IServiceAccount getServiceAccount();
+```
 
 - *Type:* [`org.cdk8s.plus17.IServiceAccount`](#org.cdk8s.plus17.IServiceAccount)
 - *Default:* No service account.
@@ -2938,6 +3334,10 @@ Account (for example, default).
 
 ##### `volumes`<sup>Optional</sup> <a name="org.cdk8s.plus17.JobProps.property.volumes"></a>
 
+```java
+public java.util.List<Volume> getVolumes();
+```
+
 - *Type:* java.util.List<[`org.cdk8s.plus17.Volume`](#org.cdk8s.plus17.Volume)>
 - *Default:* No volumes.
 
@@ -2951,6 +3351,10 @@ You can also add volumes later using `podSpec.addVolume()`
 
 ##### `podMetadata`<sup>Optional</sup> <a name="org.cdk8s.plus17.JobProps.property.podMetadata"></a>
 
+```java
+public ApiObjectMetadata getPodMetadata();
+```
+
 - *Type:* [`org.cdk8s.ApiObjectMetadata`](#org.cdk8s.ApiObjectMetadata)
 
 The pod metadata.
@@ -2958,6 +3362,10 @@ The pod metadata.
 ---
 
 ##### `activeDeadline`<sup>Optional</sup> <a name="org.cdk8s.plus17.JobProps.property.activeDeadline"></a>
+
+```java
+public Duration getActiveDeadline();
+```
 
 - *Type:* [`org.cdk8s.Duration`](#org.cdk8s.Duration)
 - *Default:* If unset, then there is no deadline.
@@ -2968,6 +3376,10 @@ Specifies the duration the job may be active before the system tries to terminat
 
 ##### `backoffLimit`<sup>Optional</sup> <a name="org.cdk8s.plus17.JobProps.property.backoffLimit"></a>
 
+```java
+public java.lang.Number getBackoffLimit();
+```
+
 - *Type:* `java.lang.Number`
 - *Default:* If not set, system defaults to 6.
 
@@ -2976,6 +3388,10 @@ Specifies the number of retries before marking this job failed.
 ---
 
 ##### `ttlAfterFinished`<sup>Optional</sup> <a name="org.cdk8s.plus17.JobProps.property.ttlAfterFinished"></a>
+
+```java
+public Duration getTtlAfterFinished();
+```
 
 - *Type:* [`org.cdk8s.Duration`](#org.cdk8s.Duration)
 - *Default:* If this field is unset, the Job won't be automatically deleted.
@@ -3010,6 +3426,10 @@ MountOptions.builder()
 
 ##### `propagation`<sup>Optional</sup> <a name="org.cdk8s.plus17.MountOptions.property.propagation"></a>
 
+```java
+public MountPropagation getPropagation();
+```
+
 - *Type:* [`org.cdk8s.plus17.MountPropagation`](#org.cdk8s.plus17.MountPropagation)
 - *Default:* MountPropagation.NONE
 
@@ -3026,6 +3446,10 @@ This field is beta in 1.10.
 
 ##### `readOnly`<sup>Optional</sup> <a name="org.cdk8s.plus17.MountOptions.property.readOnly"></a>
 
+```java
+public java.lang.Boolean getReadOnly();
+```
+
 - *Type:* `java.lang.Boolean`
 - *Default:* false
 
@@ -3037,6 +3461,10 @@ Defaults to false.
 
 ##### `subPath`<sup>Optional</sup> <a name="org.cdk8s.plus17.MountOptions.property.subPath"></a>
 
+```java
+public java.lang.String getSubPath();
+```
+
 - *Type:* `java.lang.String`
 - *Default:* "" the volume's root
 
@@ -3045,6 +3473,10 @@ Path within the volume from which the container's volume should be mounted.).
 ---
 
 ##### `subPathExpr`<sup>Optional</sup> <a name="org.cdk8s.plus17.MountOptions.property.subPathExpr"></a>
+
+```java
+public java.lang.String getSubPathExpr();
+```
 
 - *Type:* `java.lang.String`
 - *Default:* "" volume's root.
@@ -3078,6 +3510,10 @@ PathMapping.builder()
 
 ##### `path`<sup>Required</sup> <a name="org.cdk8s.plus17.PathMapping.property.path"></a>
 
+```java
+public java.lang.String getPath();
+```
+
 - *Type:* `java.lang.String`
 
 The relative path of the file to map the key to.
@@ -3089,6 +3525,10 @@ path. May not contain the path element '..'. May not start with the string
 ---
 
 ##### `mode`<sup>Optional</sup> <a name="org.cdk8s.plus17.PathMapping.property.mode"></a>
+
+```java
+public java.lang.Number getMode();
+```
 
 - *Type:* `java.lang.Number`
 
@@ -3120,6 +3560,10 @@ PodProps.builder()
 
 ##### `metadata`<sup>Optional</sup> <a name="org.cdk8s.plus17.PodProps.property.metadata"></a>
 
+```java
+public ApiObjectMetadata getMetadata();
+```
+
 - *Type:* [`org.cdk8s.ApiObjectMetadata`](#org.cdk8s.ApiObjectMetadata)
 
 Metadata that all persisted resources must have, which includes all objects users must create.
@@ -3127,6 +3571,10 @@ Metadata that all persisted resources must have, which includes all objects user
 ---
 
 ##### `containers`<sup>Optional</sup> <a name="org.cdk8s.plus17.PodProps.property.containers"></a>
+
+```java
+public java.util.List<ContainerProps> getContainers();
+```
 
 - *Type:* java.util.List<[`org.cdk8s.plus17.ContainerProps`](#org.cdk8s.plus17.ContainerProps)>
 - *Default:* No containers. Note that a pod spec must include at least one container.
@@ -3142,6 +3590,10 @@ You can add additionnal containers using `podSpec.addContainer()`
 
 ##### `restartPolicy`<sup>Optional</sup> <a name="org.cdk8s.plus17.PodProps.property.restartPolicy"></a>
 
+```java
+public RestartPolicy getRestartPolicy();
+```
+
 - *Type:* [`org.cdk8s.plus17.RestartPolicy`](#org.cdk8s.plus17.RestartPolicy)
 - *Default:* RestartPolicy.ALWAYS
 
@@ -3152,6 +3604,10 @@ Restart policy for all containers within the pod.
 ---
 
 ##### `serviceAccount`<sup>Optional</sup> <a name="org.cdk8s.plus17.PodProps.property.serviceAccount"></a>
+
+```java
+public IServiceAccount getServiceAccount();
+```
 
 - *Type:* [`org.cdk8s.plus17.IServiceAccount`](#org.cdk8s.plus17.IServiceAccount)
 - *Default:* No service account.
@@ -3170,6 +3626,10 @@ Account (for example, default).
 ---
 
 ##### `volumes`<sup>Optional</sup> <a name="org.cdk8s.plus17.PodProps.property.volumes"></a>
+
+```java
+public java.util.List<Volume> getVolumes();
+```
 
 - *Type:* java.util.List<[`org.cdk8s.plus17.Volume`](#org.cdk8s.plus17.Volume)>
 - *Default:* No volumes.
@@ -3201,6 +3661,10 @@ PodSpecProps.builder()
 
 ##### `containers`<sup>Optional</sup> <a name="org.cdk8s.plus17.PodSpecProps.property.containers"></a>
 
+```java
+public java.util.List<ContainerProps> getContainers();
+```
+
 - *Type:* java.util.List<[`org.cdk8s.plus17.ContainerProps`](#org.cdk8s.plus17.ContainerProps)>
 - *Default:* No containers. Note that a pod spec must include at least one container.
 
@@ -3215,6 +3679,10 @@ You can add additionnal containers using `podSpec.addContainer()`
 
 ##### `restartPolicy`<sup>Optional</sup> <a name="org.cdk8s.plus17.PodSpecProps.property.restartPolicy"></a>
 
+```java
+public RestartPolicy getRestartPolicy();
+```
+
 - *Type:* [`org.cdk8s.plus17.RestartPolicy`](#org.cdk8s.plus17.RestartPolicy)
 - *Default:* RestartPolicy.ALWAYS
 
@@ -3225,6 +3693,10 @@ Restart policy for all containers within the pod.
 ---
 
 ##### `serviceAccount`<sup>Optional</sup> <a name="org.cdk8s.plus17.PodSpecProps.property.serviceAccount"></a>
+
+```java
+public IServiceAccount getServiceAccount();
+```
 
 - *Type:* [`org.cdk8s.plus17.IServiceAccount`](#org.cdk8s.plus17.IServiceAccount)
 - *Default:* No service account.
@@ -3243,6 +3715,10 @@ Account (for example, default).
 ---
 
 ##### `volumes`<sup>Optional</sup> <a name="org.cdk8s.plus17.PodSpecProps.property.volumes"></a>
+
+```java
+public java.util.List<Volume> getVolumes();
+```
 
 - *Type:* java.util.List<[`org.cdk8s.plus17.Volume`](#org.cdk8s.plus17.Volume)>
 - *Default:* No volumes.
@@ -3277,6 +3753,10 @@ PodTemplateProps.builder()
 
 ##### `containers`<sup>Optional</sup> <a name="org.cdk8s.plus17.PodTemplateProps.property.containers"></a>
 
+```java
+public java.util.List<ContainerProps> getContainers();
+```
+
 - *Type:* java.util.List<[`org.cdk8s.plus17.ContainerProps`](#org.cdk8s.plus17.ContainerProps)>
 - *Default:* No containers. Note that a pod spec must include at least one container.
 
@@ -3291,6 +3771,10 @@ You can add additionnal containers using `podSpec.addContainer()`
 
 ##### `restartPolicy`<sup>Optional</sup> <a name="org.cdk8s.plus17.PodTemplateProps.property.restartPolicy"></a>
 
+```java
+public RestartPolicy getRestartPolicy();
+```
+
 - *Type:* [`org.cdk8s.plus17.RestartPolicy`](#org.cdk8s.plus17.RestartPolicy)
 - *Default:* RestartPolicy.ALWAYS
 
@@ -3301,6 +3785,10 @@ Restart policy for all containers within the pod.
 ---
 
 ##### `serviceAccount`<sup>Optional</sup> <a name="org.cdk8s.plus17.PodTemplateProps.property.serviceAccount"></a>
+
+```java
+public IServiceAccount getServiceAccount();
+```
 
 - *Type:* [`org.cdk8s.plus17.IServiceAccount`](#org.cdk8s.plus17.IServiceAccount)
 - *Default:* No service account.
@@ -3320,6 +3808,10 @@ Account (for example, default).
 
 ##### `volumes`<sup>Optional</sup> <a name="org.cdk8s.plus17.PodTemplateProps.property.volumes"></a>
 
+```java
+public java.util.List<Volume> getVolumes();
+```
+
 - *Type:* java.util.List<[`org.cdk8s.plus17.Volume`](#org.cdk8s.plus17.Volume)>
 - *Default:* No volumes.
 
@@ -3332,6 +3824,10 @@ You can also add volumes later using `podSpec.addVolume()`
 ---
 
 ##### `podMetadata`<sup>Optional</sup> <a name="org.cdk8s.plus17.PodTemplateProps.property.podMetadata"></a>
+
+```java
+public ApiObjectMetadata getPodMetadata();
+```
 
 - *Type:* [`org.cdk8s.ApiObjectMetadata`](#org.cdk8s.ApiObjectMetadata)
 
@@ -3359,6 +3855,10 @@ ProbeOptions.builder()
 
 ##### `failureThreshold`<sup>Optional</sup> <a name="org.cdk8s.plus17.ProbeOptions.property.failureThreshold"></a>
 
+```java
+public java.lang.Number getFailureThreshold();
+```
+
 - *Type:* `java.lang.Number`
 - *Default:* 3
 
@@ -3369,6 +3869,10 @@ Defaults to 3. Minimum value is 1.
 ---
 
 ##### `initialDelaySeconds`<sup>Optional</sup> <a name="org.cdk8s.plus17.ProbeOptions.property.initialDelaySeconds"></a>
+
+```java
+public Duration getInitialDelaySeconds();
+```
 
 - *Type:* [`org.cdk8s.Duration`](#org.cdk8s.Duration)
 - *Default:* immediate
@@ -3381,6 +3885,10 @@ Number of seconds after the container has started before liveness probes are ini
 
 ##### `periodSeconds`<sup>Optional</sup> <a name="org.cdk8s.plus17.ProbeOptions.property.periodSeconds"></a>
 
+```java
+public Duration getPeriodSeconds();
+```
+
 - *Type:* [`org.cdk8s.Duration`](#org.cdk8s.Duration)
 - *Default:* Duration.seconds(10) Minimum value is 1.
 
@@ -3392,6 +3900,10 @@ Default to 10 seconds. Minimum value is 1.
 
 ##### `successThreshold`<sup>Optional</sup> <a name="org.cdk8s.plus17.ProbeOptions.property.successThreshold"></a>
 
+```java
+public java.lang.Number getSuccessThreshold();
+```
+
 - *Type:* `java.lang.Number`
 - *Default:* 1 Must be 1 for liveness and startup. Minimum value is 1.
 
@@ -3402,6 +3914,10 @@ Must be 1 for liveness and startup. Minimum value is 1.
 ---
 
 ##### `timeoutSeconds`<sup>Optional</sup> <a name="org.cdk8s.plus17.ProbeOptions.property.timeoutSeconds"></a>
+
+```java
+public Duration getTimeoutSeconds();
+```
 
 - *Type:* [`org.cdk8s.Duration`](#org.cdk8s.Duration)
 - *Default:* Duration.seconds(1)
@@ -3430,6 +3946,10 @@ ResourceProps.builder()
 
 ##### `metadata`<sup>Optional</sup> <a name="org.cdk8s.plus17.ResourceProps.property.metadata"></a>
 
+```java
+public ApiObjectMetadata getMetadata();
+```
+
 - *Type:* [`org.cdk8s.ApiObjectMetadata`](#org.cdk8s.ApiObjectMetadata)
 
 Metadata that all persisted resources must have, which includes all objects users must create.
@@ -3452,6 +3972,10 @@ SecretProps.builder()
 
 ##### `metadata`<sup>Optional</sup> <a name="org.cdk8s.plus17.SecretProps.property.metadata"></a>
 
+```java
+public ApiObjectMetadata getMetadata();
+```
+
 - *Type:* [`org.cdk8s.ApiObjectMetadata`](#org.cdk8s.ApiObjectMetadata)
 
 Metadata that all persisted resources must have, which includes all objects users must create.
@@ -3459,6 +3983,10 @@ Metadata that all persisted resources must have, which includes all objects user
 ---
 
 ##### `stringData`<sup>Optional</sup> <a name="org.cdk8s.plus17.SecretProps.property.stringData"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getStringData();
+```
 
 - *Type:* java.util.Map<java.lang.String, `java.lang.String`>
 
@@ -3472,6 +4000,10 @@ output when reading from the API.
 ---
 
 ##### `type`<sup>Optional</sup> <a name="org.cdk8s.plus17.SecretProps.property.type"></a>
+
+```java
+public java.lang.String getType();
+```
 
 - *Type:* `java.lang.String`
 - *Default:* undefined - Don't set a type.
@@ -3500,6 +4032,10 @@ SecretValue.builder()
 
 ##### `key`<sup>Required</sup> <a name="org.cdk8s.plus17.SecretValue.property.key"></a>
 
+```java
+public java.lang.String getKey();
+```
+
 - *Type:* `java.lang.String`
 
 The JSON key.
@@ -3507,6 +4043,10 @@ The JSON key.
 ---
 
 ##### `secret`<sup>Required</sup> <a name="org.cdk8s.plus17.SecretValue.property.secret"></a>
+
+```java
+public ISecret getSecret();
+```
 
 - *Type:* [`org.cdk8s.plus17.ISecret`](#org.cdk8s.plus17.ISecret)
 
@@ -3533,6 +4073,10 @@ ServiceAccountProps.builder()
 
 ##### `metadata`<sup>Optional</sup> <a name="org.cdk8s.plus17.ServiceAccountProps.property.metadata"></a>
 
+```java
+public ApiObjectMetadata getMetadata();
+```
+
 - *Type:* [`org.cdk8s.ApiObjectMetadata`](#org.cdk8s.ApiObjectMetadata)
 
 Metadata that all persisted resources must have, which includes all objects users must create.
@@ -3540,6 +4084,10 @@ Metadata that all persisted resources must have, which includes all objects user
 ---
 
 ##### `secrets`<sup>Optional</sup> <a name="org.cdk8s.plus17.ServiceAccountProps.property.secrets"></a>
+
+```java
+public java.util.List<ISecret> getSecrets();
+```
 
 - *Type:* java.util.List<[`org.cdk8s.plus17.ISecret`](#org.cdk8s.plus17.ISecret)>
 
@@ -3564,6 +4112,10 @@ ServiceIngressV1BetaBackendOptions.builder()
 ```
 
 ##### `port`<sup>Optional</sup> <a name="org.cdk8s.plus17.ServiceIngressV1BetaBackendOptions.property.port"></a>
+
+```java
+public java.lang.Number getPort();
+```
 
 - *Type:* `java.lang.Number`
 - *Default:* if the service exposes a single port, this port will be used.
@@ -3597,6 +4149,10 @@ ServicePort.builder()
 
 ##### `name`<sup>Optional</sup> <a name="org.cdk8s.plus17.ServicePort.property.name"></a>
 
+```java
+public java.lang.String getName();
+```
+
 - *Type:* `java.lang.String`
 
 The name of this port within the service.
@@ -3609,6 +4165,10 @@ on this service.
 ---
 
 ##### `nodePort`<sup>Optional</sup> <a name="org.cdk8s.plus17.ServicePort.property.nodePort"></a>
+
+```java
+public java.lang.Number getNodePort();
+```
 
 - *Type:* `java.lang.Number`
 - *Default:* to auto-allocate a port if the ServiceType of this Service
@@ -3627,6 +4187,10 @@ requires one.
 
 ##### `protocol`<sup>Optional</sup> <a name="org.cdk8s.plus17.ServicePort.property.protocol"></a>
 
+```java
+public Protocol getProtocol();
+```
+
 - *Type:* [`org.cdk8s.plus17.Protocol`](#org.cdk8s.plus17.Protocol)
 - *Default:* Protocol.TCP
 
@@ -3638,6 +4202,10 @@ Supports "TCP", "UDP", and "SCTP". Default is TCP.
 
 ##### `targetPort`<sup>Optional</sup> <a name="org.cdk8s.plus17.ServicePort.property.targetPort"></a>
 
+```java
+public java.lang.Number getTargetPort();
+```
+
 - *Type:* `java.lang.Number`
 - *Default:* The value of `port` will be used.
 
@@ -3646,6 +4214,10 @@ The port number the service will redirect to.
 ---
 
 ##### `port`<sup>Required</sup> <a name="org.cdk8s.plus17.ServicePort.property.port"></a>
+
+```java
+public java.lang.Number getPort();
+```
 
 - *Type:* `java.lang.Number`
 
@@ -3670,6 +4242,10 @@ ServicePortOptions.builder()
 
 ##### `name`<sup>Optional</sup> <a name="org.cdk8s.plus17.ServicePortOptions.property.name"></a>
 
+```java
+public java.lang.String getName();
+```
+
 - *Type:* `java.lang.String`
 
 The name of this port within the service.
@@ -3682,6 +4258,10 @@ on this service.
 ---
 
 ##### `nodePort`<sup>Optional</sup> <a name="org.cdk8s.plus17.ServicePortOptions.property.nodePort"></a>
+
+```java
+public java.lang.Number getNodePort();
+```
 
 - *Type:* `java.lang.Number`
 - *Default:* to auto-allocate a port if the ServiceType of this Service
@@ -3700,6 +4280,10 @@ requires one.
 
 ##### `protocol`<sup>Optional</sup> <a name="org.cdk8s.plus17.ServicePortOptions.property.protocol"></a>
 
+```java
+public Protocol getProtocol();
+```
+
 - *Type:* [`org.cdk8s.plus17.Protocol`](#org.cdk8s.plus17.Protocol)
 - *Default:* Protocol.TCP
 
@@ -3710,6 +4294,10 @@ Supports "TCP", "UDP", and "SCTP". Default is TCP.
 ---
 
 ##### `targetPort`<sup>Optional</sup> <a name="org.cdk8s.plus17.ServicePortOptions.property.targetPort"></a>
+
+```java
+public java.lang.Number getTargetPort();
+```
 
 - *Type:* `java.lang.Number`
 - *Default:* The value of `port` will be used.
@@ -3740,6 +4328,10 @@ ServiceProps.builder()
 
 ##### `metadata`<sup>Optional</sup> <a name="org.cdk8s.plus17.ServiceProps.property.metadata"></a>
 
+```java
+public ApiObjectMetadata getMetadata();
+```
+
 - *Type:* [`org.cdk8s.ApiObjectMetadata`](#org.cdk8s.ApiObjectMetadata)
 
 Metadata that all persisted resources must have, which includes all objects users must create.
@@ -3747,6 +4339,10 @@ Metadata that all persisted resources must have, which includes all objects user
 ---
 
 ##### `clusterIP`<sup>Optional</sup> <a name="org.cdk8s.plus17.ServiceProps.property.clusterIP"></a>
+
+```java
+public java.lang.String getClusterIP();
+```
 
 - *Type:* `java.lang.String`
 - *Default:* Automatically assigned.
@@ -3766,6 +4362,10 @@ ClusterIP, NodePort, and LoadBalancer. Ignored if type is ExternalName.
 
 ##### `externalIPs`<sup>Optional</sup> <a name="org.cdk8s.plus17.ServiceProps.property.externalIPs"></a>
 
+```java
+public java.util.List<java.lang.String> getExternalIPs();
+```
+
 - *Type:* java.util.List<`java.lang.String`>
 - *Default:* No external IPs.
 
@@ -3780,6 +4380,10 @@ Kubernetes system.
 
 ##### `externalName`<sup>Optional</sup> <a name="org.cdk8s.plus17.ServiceProps.property.externalName"></a>
 
+```java
+public java.lang.String getExternalName();
+```
+
 - *Type:* `java.lang.String`
 - *Default:* No external name.
 
@@ -3788,6 +4392,10 @@ The externalName to be used when ServiceType.EXTERNAL_NAME is set.
 ---
 
 ##### `loadBalancerSourceRanges`<sup>Optional</sup> <a name="org.cdk8s.plus17.ServiceProps.property.loadBalancerSourceRanges"></a>
+
+```java
+public java.util.List<java.lang.String> getLoadBalancerSourceRanges();
+```
 
 - *Type:* java.util.List<`java.lang.String`>
 
@@ -3799,6 +4407,10 @@ More info: https://kubernetes.io/docs/tasks/access-application-cluster/configure
 
 ##### `ports`<sup>Optional</sup> <a name="org.cdk8s.plus17.ServiceProps.property.ports"></a>
 
+```java
+public java.util.List<ServicePort> getPorts();
+```
+
 - *Type:* java.util.List<[`org.cdk8s.plus17.ServicePort`](#org.cdk8s.plus17.ServicePort)>
 
 The port exposed by this service.
@@ -3808,6 +4420,10 @@ More info: https://kubernetes.io/docs/concepts/services-networking/service/#virt
 ---
 
 ##### `type`<sup>Optional</sup> <a name="org.cdk8s.plus17.ServiceProps.property.type"></a>
+
+```java
+public ServiceType getType();
+```
 
 - *Type:* [`org.cdk8s.plus17.ServiceType`](#org.cdk8s.plus17.ServiceType)
 - *Default:* ServiceType.ClusterIP
@@ -3843,6 +4459,10 @@ StatefulSetProps.builder()
 
 ##### `metadata`<sup>Optional</sup> <a name="org.cdk8s.plus17.StatefulSetProps.property.metadata"></a>
 
+```java
+public ApiObjectMetadata getMetadata();
+```
+
 - *Type:* [`org.cdk8s.ApiObjectMetadata`](#org.cdk8s.ApiObjectMetadata)
 
 Metadata that all persisted resources must have, which includes all objects users must create.
@@ -3850,6 +4470,10 @@ Metadata that all persisted resources must have, which includes all objects user
 ---
 
 ##### `containers`<sup>Optional</sup> <a name="org.cdk8s.plus17.StatefulSetProps.property.containers"></a>
+
+```java
+public java.util.List<ContainerProps> getContainers();
+```
 
 - *Type:* java.util.List<[`org.cdk8s.plus17.ContainerProps`](#org.cdk8s.plus17.ContainerProps)>
 - *Default:* No containers. Note that a pod spec must include at least one container.
@@ -3865,6 +4489,10 @@ You can add additionnal containers using `podSpec.addContainer()`
 
 ##### `restartPolicy`<sup>Optional</sup> <a name="org.cdk8s.plus17.StatefulSetProps.property.restartPolicy"></a>
 
+```java
+public RestartPolicy getRestartPolicy();
+```
+
 - *Type:* [`org.cdk8s.plus17.RestartPolicy`](#org.cdk8s.plus17.RestartPolicy)
 - *Default:* RestartPolicy.ALWAYS
 
@@ -3875,6 +4503,10 @@ Restart policy for all containers within the pod.
 ---
 
 ##### `serviceAccount`<sup>Optional</sup> <a name="org.cdk8s.plus17.StatefulSetProps.property.serviceAccount"></a>
+
+```java
+public IServiceAccount getServiceAccount();
+```
 
 - *Type:* [`org.cdk8s.plus17.IServiceAccount`](#org.cdk8s.plus17.IServiceAccount)
 - *Default:* No service account.
@@ -3894,6 +4526,10 @@ Account (for example, default).
 
 ##### `volumes`<sup>Optional</sup> <a name="org.cdk8s.plus17.StatefulSetProps.property.volumes"></a>
 
+```java
+public java.util.List<Volume> getVolumes();
+```
+
 - *Type:* java.util.List<[`org.cdk8s.plus17.Volume`](#org.cdk8s.plus17.Volume)>
 - *Default:* No volumes.
 
@@ -3907,6 +4543,10 @@ You can also add volumes later using `podSpec.addVolume()`
 
 ##### `podMetadata`<sup>Optional</sup> <a name="org.cdk8s.plus17.StatefulSetProps.property.podMetadata"></a>
 
+```java
+public ApiObjectMetadata getPodMetadata();
+```
+
 - *Type:* [`org.cdk8s.ApiObjectMetadata`](#org.cdk8s.ApiObjectMetadata)
 
 The pod metadata.
@@ -3915,6 +4555,10 @@ The pod metadata.
 
 ##### `service`<sup>Required</sup> <a name="org.cdk8s.plus17.StatefulSetProps.property.service"></a>
 
+```java
+public Service getService();
+```
+
 - *Type:* [`org.cdk8s.plus17.Service`](#org.cdk8s.plus17.Service)
 
 Service to associate with the statefulset.
@@ -3922,6 +4566,10 @@ Service to associate with the statefulset.
 ---
 
 ##### `defaultSelector`<sup>Optional</sup> <a name="org.cdk8s.plus17.StatefulSetProps.property.defaultSelector"></a>
+
+```java
+public java.lang.Boolean getDefaultSelector();
+```
 
 - *Type:* `java.lang.Boolean`
 - *Default:* true
@@ -3935,6 +4583,10 @@ If this is set to `false` you must define your selector through
 
 ##### `podManagementPolicy`<sup>Optional</sup> <a name="org.cdk8s.plus17.StatefulSetProps.property.podManagementPolicy"></a>
 
+```java
+public PodManagementPolicy getPodManagementPolicy();
+```
+
 - *Type:* [`org.cdk8s.plus17.PodManagementPolicy`](#org.cdk8s.plus17.PodManagementPolicy)
 - *Default:* PodManagementPolicy.ORDERED_READY
 
@@ -3943,6 +4595,10 @@ Pod management policy to use for this statefulset.
 ---
 
 ##### `replicas`<sup>Optional</sup> <a name="org.cdk8s.plus17.StatefulSetProps.property.replicas"></a>
+
+```java
+public java.lang.Number getReplicas();
+```
 
 - *Type:* `java.lang.Number`
 - *Default:* 1
@@ -3972,6 +4628,10 @@ VolumeMount.builder()
 
 ##### `propagation`<sup>Optional</sup> <a name="org.cdk8s.plus17.VolumeMount.property.propagation"></a>
 
+```java
+public MountPropagation getPropagation();
+```
+
 - *Type:* [`org.cdk8s.plus17.MountPropagation`](#org.cdk8s.plus17.MountPropagation)
 - *Default:* MountPropagation.NONE
 
@@ -3988,6 +4648,10 @@ This field is beta in 1.10.
 
 ##### `readOnly`<sup>Optional</sup> <a name="org.cdk8s.plus17.VolumeMount.property.readOnly"></a>
 
+```java
+public java.lang.Boolean getReadOnly();
+```
+
 - *Type:* `java.lang.Boolean`
 - *Default:* false
 
@@ -3999,6 +4663,10 @@ Defaults to false.
 
 ##### `subPath`<sup>Optional</sup> <a name="org.cdk8s.plus17.VolumeMount.property.subPath"></a>
 
+```java
+public java.lang.String getSubPath();
+```
+
 - *Type:* `java.lang.String`
 - *Default:* "" the volume's root
 
@@ -4007,6 +4675,10 @@ Path within the volume from which the container's volume should be mounted.).
 ---
 
 ##### `subPathExpr`<sup>Optional</sup> <a name="org.cdk8s.plus17.VolumeMount.property.subPathExpr"></a>
+
+```java
+public java.lang.String getSubPathExpr();
+```
 
 - *Type:* `java.lang.String`
 - *Default:* "" volume's root.
@@ -4025,6 +4697,10 @@ is beta in 1.15.
 
 ##### `path`<sup>Required</sup> <a name="org.cdk8s.plus17.VolumeMount.property.path"></a>
 
+```java
+public java.lang.String getPath();
+```
+
 - *Type:* `java.lang.String`
 
 Path within the container at which the volume should be mounted.
@@ -4035,6 +4711,10 @@ contain ':'.
 ---
 
 ##### `volume`<sup>Required</sup> <a name="org.cdk8s.plus17.VolumeMount.property.volume"></a>
+
+```java
+public Volume getVolume();
+```
 
 - *Type:* [`org.cdk8s.plus17.Volume`](#org.cdk8s.plus17.Volume)
 
@@ -4262,6 +4942,10 @@ The volume to mount.
 
 ##### `env`<sup>Required</sup> <a name="org.cdk8s.plus17.Container.property.env"></a>
 
+```java
+public java.util.Map<java.lang.String, EnvValue> getEnv();
+```
+
 - *Type:* java.util.Map<java.lang.String, [`org.cdk8s.plus17.EnvValue`](#org.cdk8s.plus17.EnvValue)>
 
 The environment variables for this container.
@@ -4272,6 +4956,10 @@ Returns a copy. To add environment variables use `addEnv()`.
 
 ##### `image`<sup>Required</sup> <a name="org.cdk8s.plus17.Container.property.image"></a>
 
+```java
+public java.lang.String getImage();
+```
+
 - *Type:* `java.lang.String`
 
 The container image.
@@ -4279,6 +4967,10 @@ The container image.
 ---
 
 ##### `imagePullPolicy`<sup>Required</sup> <a name="org.cdk8s.plus17.Container.property.imagePullPolicy"></a>
+
+```java
+public ImagePullPolicy getImagePullPolicy();
+```
 
 - *Type:* [`org.cdk8s.plus17.ImagePullPolicy`](#org.cdk8s.plus17.ImagePullPolicy)
 
@@ -4288,6 +4980,10 @@ Image pull policy for this container.
 
 ##### `mounts`<sup>Required</sup> <a name="org.cdk8s.plus17.Container.property.mounts"></a>
 
+```java
+public java.util.List<VolumeMount> getMounts();
+```
+
 - *Type:* java.util.List<[`org.cdk8s.plus17.VolumeMount`](#org.cdk8s.plus17.VolumeMount)>
 
 Volume mounts configured for this container.
@@ -4295,6 +4991,10 @@ Volume mounts configured for this container.
 ---
 
 ##### `name`<sup>Required</sup> <a name="org.cdk8s.plus17.Container.property.name"></a>
+
+```java
+public java.lang.String getName();
+```
 
 - *Type:* `java.lang.String`
 
@@ -4304,6 +5004,10 @@ The name of the container.
 
 ##### `args`<sup>Optional</sup> <a name="org.cdk8s.plus17.Container.property.args"></a>
 
+```java
+public java.util.List<java.lang.String> getArgs();
+```
+
 - *Type:* java.util.List<`java.lang.String`>
 
 Arguments to the entrypoint.
@@ -4311,6 +5015,10 @@ Arguments to the entrypoint.
 ---
 
 ##### `command`<sup>Optional</sup> <a name="org.cdk8s.plus17.Container.property.command"></a>
+
+```java
+public java.util.List<java.lang.String> getCommand();
+```
 
 - *Type:* java.util.List<`java.lang.String`>
 
@@ -4320,6 +5028,10 @@ Entrypoint array (the command to execute when the container starts).
 
 ##### `port`<sup>Optional</sup> <a name="org.cdk8s.plus17.Container.property.port"></a>
 
+```java
+public java.lang.Number getPort();
+```
+
 - *Type:* `java.lang.Number`
 
 The port this container exposes.
@@ -4327,6 +5039,10 @@ The port this container exposes.
 ---
 
 ##### `workingDir`<sup>Optional</sup> <a name="org.cdk8s.plus17.Container.property.workingDir"></a>
+
+```java
+public java.lang.String getWorkingDir();
+```
 
 - *Type:* `java.lang.String`
 
@@ -4445,11 +5161,19 @@ The value.
 
 ##### `value`<sup>Optional</sup> <a name="org.cdk8s.plus17.EnvValue.property.value"></a>
 
+```java
+public java.lang.Object getValue();
+```
+
 - *Type:* `java.lang.Object`
 
 ---
 
 ##### `valueFrom`<sup>Optional</sup> <a name="org.cdk8s.plus17.EnvValue.property.valueFrom"></a>
+
+```java
+public java.lang.Object getValueFrom();
+```
 
 - *Type:* `java.lang.Object`
 
@@ -4594,6 +5318,10 @@ public addVolume(Volume volume)
 
 ##### `containers`<sup>Required</sup> <a name="org.cdk8s.plus17.PodSpec.property.containers"></a>
 
+```java
+public java.util.List<Container> getContainers();
+```
+
 - *Type:* java.util.List<[`org.cdk8s.plus17.Container`](#org.cdk8s.plus17.Container)>
 
 The containers belonging to the pod.
@@ -4603,6 +5331,10 @@ Use `addContainer` to add containers.
 ---
 
 ##### `volumes`<sup>Required</sup> <a name="org.cdk8s.plus17.PodSpec.property.volumes"></a>
+
+```java
+public java.util.List<Volume> getVolumes();
+```
 
 - *Type:* java.util.List<[`org.cdk8s.plus17.Volume`](#org.cdk8s.plus17.Volume)>
 
@@ -4614,6 +5346,10 @@ Use `addVolume` to add volumes.
 
 ##### `restartPolicy`<sup>Optional</sup> <a name="org.cdk8s.plus17.PodSpec.property.restartPolicy"></a>
 
+```java
+public RestartPolicy getRestartPolicy();
+```
+
 - *Type:* [`org.cdk8s.plus17.RestartPolicy`](#org.cdk8s.plus17.RestartPolicy)
 
 Restart policy for all containers within the pod.
@@ -4621,6 +5357,10 @@ Restart policy for all containers within the pod.
 ---
 
 ##### `serviceAccount`<sup>Optional</sup> <a name="org.cdk8s.plus17.PodSpec.property.serviceAccount"></a>
+
+```java
+public IServiceAccount getServiceAccount();
+```
 
 - *Type:* [`org.cdk8s.plus17.IServiceAccount`](#org.cdk8s.plus17.IServiceAccount)
 
@@ -4718,6 +5458,10 @@ The pod metadata.
 #### Properties <a name="Properties"></a>
 
 ##### `podMetadata`<sup>Required</sup> <a name="org.cdk8s.plus17.PodTemplate.property.podMetadata"></a>
+
+```java
+public ApiObjectMetadataDefinition getPodMetadata();
+```
 
 - *Type:* [`org.cdk8s.ApiObjectMetadataDefinition`](#org.cdk8s.ApiObjectMetadataDefinition)
 
@@ -4901,6 +5645,10 @@ Additional options.
 
 ##### `name`<sup>Required</sup> <a name="org.cdk8s.plus17.Volume.property.name"></a>
 
+```java
+public java.lang.String getName();
+```
+
 - *Type:* `java.lang.String`
 
 ---
@@ -4920,6 +5668,10 @@ Represents a config map.
 #### Properties <a name="Properties"></a>
 
 ##### `name`<sup>Required</sup> <a name="org.cdk8s.plus17.IConfigMap.property.name"></a>
+
+```java
+public java.lang.String getName();
+```
 
 - *Type:* `java.lang.String`
 
@@ -4969,6 +5721,10 @@ The volume.
 
 ##### `containers`<sup>Required</sup> <a name="org.cdk8s.plus17.IPodSpec.property.containers"></a>
 
+```java
+public java.util.List<Container> getContainers();
+```
+
 - *Type:* java.util.List<[`org.cdk8s.plus17.Container`](#org.cdk8s.plus17.Container)>
 
 The containers belonging to the pod.
@@ -4978,6 +5734,10 @@ Use `addContainer` to add containers.
 ---
 
 ##### `volumes`<sup>Required</sup> <a name="org.cdk8s.plus17.IPodSpec.property.volumes"></a>
+
+```java
+public java.util.List<Volume> getVolumes();
+```
 
 - *Type:* java.util.List<[`org.cdk8s.plus17.Volume`](#org.cdk8s.plus17.Volume)>
 
@@ -4989,6 +5749,10 @@ Use `addVolume` to add volumes.
 
 ##### `restartPolicy`<sup>Optional</sup> <a name="org.cdk8s.plus17.IPodSpec.property.restartPolicy"></a>
 
+```java
+public RestartPolicy getRestartPolicy();
+```
+
 - *Type:* [`org.cdk8s.plus17.RestartPolicy`](#org.cdk8s.plus17.RestartPolicy)
 
 Restart policy for all containers within the pod.
@@ -4996,6 +5760,10 @@ Restart policy for all containers within the pod.
 ---
 
 ##### `serviceAccount`<sup>Optional</sup> <a name="org.cdk8s.plus17.IPodSpec.property.serviceAccount"></a>
+
+```java
+public IServiceAccount getServiceAccount();
+```
 
 - *Type:* [`org.cdk8s.plus17.IServiceAccount`](#org.cdk8s.plus17.IServiceAccount)
 
@@ -5018,6 +5786,10 @@ Use the `PodTemplate` class as an implementation helper.
 
 ##### `containers`<sup>Required</sup> <a name="org.cdk8s.plus17.IPodTemplate.property.containers"></a>
 
+```java
+public java.util.List<Container> getContainers();
+```
+
 - *Type:* java.util.List<[`org.cdk8s.plus17.Container`](#org.cdk8s.plus17.Container)>
 
 The containers belonging to the pod.
@@ -5027,6 +5799,10 @@ Use `addContainer` to add containers.
 ---
 
 ##### `volumes`<sup>Required</sup> <a name="org.cdk8s.plus17.IPodTemplate.property.volumes"></a>
+
+```java
+public java.util.List<Volume> getVolumes();
+```
 
 - *Type:* java.util.List<[`org.cdk8s.plus17.Volume`](#org.cdk8s.plus17.Volume)>
 
@@ -5038,6 +5814,10 @@ Use `addVolume` to add volumes.
 
 ##### `restartPolicy`<sup>Optional</sup> <a name="org.cdk8s.plus17.IPodTemplate.property.restartPolicy"></a>
 
+```java
+public RestartPolicy getRestartPolicy();
+```
+
 - *Type:* [`org.cdk8s.plus17.RestartPolicy`](#org.cdk8s.plus17.RestartPolicy)
 
 Restart policy for all containers within the pod.
@@ -5046,6 +5826,10 @@ Restart policy for all containers within the pod.
 
 ##### `serviceAccount`<sup>Optional</sup> <a name="org.cdk8s.plus17.IPodTemplate.property.serviceAccount"></a>
 
+```java
+public IServiceAccount getServiceAccount();
+```
+
 - *Type:* [`org.cdk8s.plus17.IServiceAccount`](#org.cdk8s.plus17.IServiceAccount)
 
 The service account used to run this pod.
@@ -5053,6 +5837,10 @@ The service account used to run this pod.
 ---
 
 ##### `podMetadata`<sup>Required</sup> <a name="org.cdk8s.plus17.IPodTemplate.property.podMetadata"></a>
+
+```java
+public ApiObjectMetadataDefinition getPodMetadata();
+```
 
 - *Type:* [`org.cdk8s.ApiObjectMetadataDefinition`](#org.cdk8s.ApiObjectMetadataDefinition)
 
@@ -5071,6 +5859,10 @@ Represents a resource.
 
 ##### `name`<sup>Required</sup> <a name="org.cdk8s.plus17.IResource.property.name"></a>
 
+```java
+public java.lang.String getName();
+```
+
 - *Type:* `java.lang.String`
 
 The Kubernetes name of this resource.
@@ -5088,6 +5880,10 @@ The Kubernetes name of this resource.
 
 ##### `name`<sup>Required</sup> <a name="org.cdk8s.plus17.ISecret.property.name"></a>
 
+```java
+public java.lang.String getName();
+```
+
 - *Type:* `java.lang.String`
 
 The Kubernetes name of this resource.
@@ -5104,6 +5900,10 @@ The Kubernetes name of this resource.
 #### Properties <a name="Properties"></a>
 
 ##### `name`<sup>Required</sup> <a name="org.cdk8s.plus17.IServiceAccount.property.name"></a>
+
+```java
+public java.lang.String getName();
+```
 
 - *Type:* `java.lang.String`
 
