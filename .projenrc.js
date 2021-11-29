@@ -6,7 +6,7 @@ const K8S_VERSION = '1.17.0';
 
 const project = new JsiiProject({
   name: `cdk8s-plus-${SPEC_VERSION}`,
-  description: 'High level abstractions on top of cdk8s',
+  description: 'cdk8s+ is a software development framework that provides high level abstractions for authoring Kubernetes applications. cdk8s-plus-17 synthesizes Kubernetes manifests for Kubernetes 1.17. The package is deprecated.',
 
   repositoryUrl: 'https://github.com/cdk8s-team/cdk8s-plus-17.git',
   authorName: 'Amazon Web Services',
@@ -37,6 +37,16 @@ const project = new JsiiProject({
     'cdk8s',
     'cdk8s-cli',
     'constructs',
+  ],
+
+  keywords: [
+    'cdk',
+    'kubernetes',
+    'k8s',
+    'constructs',
+    'containers',
+    'configuration',
+    'microservices',
   ],
 
   defaultReleaseBranch: 'main',
